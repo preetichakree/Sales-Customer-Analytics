@@ -1,1 +1,21 @@
-
+order_id,order_date,customer_id,product_id,product_name,category,region,sales_channel,quantity,unit_price,discount_pct,sales_amount,cost_amount,profit
+ORD001,2025-01-05,C001,P001,Laptop,Electronics,West,Online,1,55000,5,52250,42000,10250
+ORD002,2025-01-08,C002,P002,Headphones,Electronics,North,Store,2,2500,10,4500,3000,1500
+ORD003,2025-01-12,C003,P003,Office Chair,Furniture,South,Online,1,8000,5,7600,5500,2100
+ORD004,2025-02-03,C001,P004,Keyboard,Electronics,West,Store,2,1500,0,3000,1800,1200
+ORD005,2025-02-10,C004,P005,Desk,Furniture,East,Online,1,12000,10,10800,8500,2300
+ORD006,2025-02-15,C005,P006,Notebook,Stationery,North,Store,10,100,0,1000,600,400
+ORD007,2025-03-02,C002,P001,Laptop,Electronics,North,Online,1,55000,5,52250,42000,10250
+ORD008,2025-03-07,C006,P007,Mouse,Electronics,South,Store,3,800,0,2400,1500,900
+ORD009,2025-03-15,C003,P008,Books,Stationery,West,Online,5,400,10,1800,1000,800
+ORD010,2025-04-01,C007,P003,Office Chair,Furniture,East,Store,2,8000,5,15200,11000,4200
+ORD011,2025-04-11,C001,P002,Headphones,Electronics,West,Online,1,2500,0,2500,1500,1000
+ORD012,2025-04-18,C008,P005,Desk,Furniture,South,Online,1,12000,5,11400,8500,2900
+ORD013,2025-05-04,C004,P006,Notebook,Stationery,East,Store,20,100,0,2000,1200,800
+ORD014,2025-05-09,C005,P004,Keyboard,Electronics,North,Online,2,1500,10,2700,1800,900
+ORD015,2025-05-20,C006,P007,Mouse,Electronics,South,Store,4,800,5,3040,2000,1040
+ORD016,2025-06-02,C007,P001,Laptop,Electronics,East,Online,1,55000,10,49500,42000,7500
+ORD017,2025-06-10,C008,P008,Books,Stationery,West,Store,8,400,0,3200,1600,1600
+ORD018,2025-06-19,C002,P003,Office Chair,Furniture,North,Online,1,8000,0,8000,5500,2500
+ORD019,2025-07-05,C003,P005,Desk,Furniture,West,Store,1,12000,5,11400,8500,2900
+ORD020,2025-07-15,C001,P006,Notebook,Stationery,South,Online,15,100,0,1500,900,600
