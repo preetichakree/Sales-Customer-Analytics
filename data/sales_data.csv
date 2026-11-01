@@ -1,21 +1,1001 @@
-order_id,order_date,customer_id,product_id,product_name,category,region,sales_channel,quantity,unit_price,discount_pct,sales_amount,cost_amount,profit
-ORD001,2025-01-05,C001,P001,Laptop,Electronics,West,Online,1,55000,5,52250,42000,10250
-ORD002,2025-01-08,C002,P002,Headphones,Electronics,North,Store,2,2500,10,4500,3000,1500
-ORD003,2025-01-12,C003,P003,Office Chair,Furniture,South,Online,1,8000,5,7600,5500,2100
-ORD004,2025-02-03,C001,P004,Keyboard,Electronics,West,Store,2,1500,0,3000,1800,1200
-ORD005,2025-02-10,C004,P005,Desk,Furniture,East,Online,1,12000,10,10800,8500,2300
-ORD006,2025-02-15,C005,P006,Notebook,Stationery,North,Store,10,100,0,1000,600,400
-ORD007,2025-03-02,C002,P001,Laptop,Electronics,North,Online,1,55000,5,52250,42000,10250
-ORD008,2025-03-07,C006,P007,Mouse,Electronics,South,Store,3,800,0,2400,1500,900
-ORD009,2025-03-15,C003,P008,Books,Stationery,West,Online,5,400,10,1800,1000,800
-ORD010,2025-04-01,C007,P003,Office Chair,Furniture,East,Store,2,8000,5,15200,11000,4200
-ORD011,2025-04-11,C001,P002,Headphones,Electronics,West,Online,1,2500,0,2500,1500,1000
-ORD012,2025-04-18,C008,P005,Desk,Furniture,South,Online,1,12000,5,11400,8500,2900
-ORD013,2025-05-04,C004,P006,Notebook,Stationery,East,Store,20,100,0,2000,1200,800
-ORD014,2025-05-09,C005,P004,Keyboard,Electronics,North,Online,2,1500,10,2700,1800,900
-ORD015,2025-05-20,C006,P007,Mouse,Electronics,South,Store,4,800,5,3040,2000,1040
-ORD016,2025-06-02,C007,P001,Laptop,Electronics,East,Online,1,55000,10,49500,42000,7500
-ORD017,2025-06-10,C008,P008,Books,Stationery,West,Store,8,400,0,3200,1600,1600
-ORD018,2025-06-19,C002,P003,Office Chair,Furniture,North,Online,1,8000,0,8000,5500,2500
-ORD019,2025-07-05,C003,P005,Desk,Furniture,West,Store,1,12000,5,11400,8500,2900
-ORD020,2025-07-15,C001,P006,Notebook,Stationery,South,Online,15,100,0,1500,900,600
+order_id,order_date,customer_id,product_name,category,unit_price,quantity,discount,sales_amount,profit,region,payment_mode
+ORD0001,2025-06-06,C052,Laptop,Electronics,1000,2,0.05,1900.0,673.83,West,PayPal
+ORD0002,2025-12-18,C093,Notebook,Stationery,15,2,0.0,30.0,12.35,North,PayPal
+ORD0003,2025-12-24,C015,Notebook,Stationery,15,3,0.0,45.0,15.33,West,Credit Card
+ORD0004,2025-01-05,C072,Smartphone,Electronics,600,1,0.15,510.0,123.09,South,PayPal
+ORD0005,2025-03-27,C061,Headphones,Electronics,150,1,0.05,142.5,46.79,South,Cash
+ORD0006,2025-06-24,C021,Organizer,Stationery,30,5,0.0,150.0,64.78,South,Bank Transfer
+ORD0007,2025-10-17,C083,Premium Pen,Stationery,50,4,0.05,190.0,57.8,North,Bank Transfer
+ORD0008,2025-07-12,C087,Office Chair,Furniture,200,3,0.1,540.0,233.71,South,PayPal
+ORD0009,2025-11-07,C075,Desk,Furniture,350,3,0.1,945.0,386.48,East,PayPal
+ORD0010,2025-04-29,C075,Smartwatch,Electronics,250,3,0.0,750.0,324.66,South,PayPal
+ORD0011,2025-08-06,C088,Organizer,Stationery,30,1,0.2,24.0,8.54,West,Bank Transfer
+ORD0012,2025-04-24,C100,Laptop,Electronics,1000,4,0.0,4000.0,1812.0,West,Bank Transfer
+ORD0013,2025-05-25,C024,Notebook,Stationery,15,5,0.0,75.0,25.05,West,Credit Card
+ORD0014,2025-01-26,C003,Desk,Furniture,350,2,0.0,700.0,217.24,North,Cash
+ORD0015,2025-05-16,C022,Office Chair,Furniture,200,2,0.0,400.0,175.63,East,Credit Card
+ORD0016,2025-10-30,C053,Premium Pen,Stationery,50,3,0.1,135.0,52.06,South,Cash
+ORD0017,2025-08-20,C002,Smartphone,Electronics,600,4,0.0,2400.0,1065.65,East,Credit Card
+ORD0018,2025-03-17,C088,Office Chair,Furniture,200,1,0.0,200.0,88.89,East,Bank Transfer
+ORD0019,2025-11-24,C030,Desk,Furniture,350,4,0.15,1190.0,479.94,West,Credit Card
+ORD0020,2025-12-11,C038,Office Chair,Furniture,200,4,0.0,800.0,251.69,West,Cash
+ORD0021,2025-10-29,C002,Desk,Furniture,350,1,0.0,350.0,160.04,West,PayPal
+ORD0022,2025-10-16,C064,Desk,Furniture,350,3,0.0,1050.0,436.8,North,Cash
+ORD0023,2025-01-01,C060,Bookshelf,Furniture,180,4,0.0,720.0,358.61,East,PayPal
+ORD0024,2025-05-27,C021,Smartwatch,Electronics,250,2,0.0,500.0,164.2,East,Bank Transfer
+ORD0025,2025-10-14,C033,Notebook,Stationery,15,1,0.05,14.25,4.56,North,Cash
+ORD0026,2025-05-22,C076,Bookshelf,Furniture,180,5,0.0,900.0,279.58,North,Credit Card
+ORD0027,2025-02-22,C058,Premium Pen,Stationery,50,3,0.0,150.0,51.55,North,Cash
+ORD0028,2025-10-31,C022,Bookshelf,Furniture,180,1,0.1,162.0,60.71,East,PayPal
+ORD0029,2025-03-10,C089,Headphones,Electronics,150,5,0.05,712.5,300.32,East,Bank Transfer
+ORD0030,2025-12-27,C049,Headphones,Electronics,150,5,0.0,750.0,270.34,West,Credit Card
+ORD0031,2025-03-31,C091,Notebook,Stationery,15,4,0.05,57.0,22.63,West,Cash
+ORD0032,2025-08-08,C059,Office Chair,Furniture,200,4,0.0,800.0,309.41,East,PayPal
+ORD0033,2025-07-11,C042,Smartwatch,Electronics,250,4,0.0,1000.0,498.75,West,Credit Card
+ORD0034,2025-03-04,C092,Notebook,Stationery,15,1,0.05,14.25,6.56,North,Bank Transfer
+ORD0035,2025-03-14,C060,Desk,Furniture,350,1,0.0,350.0,137.52,South,Credit Card
+ORD0036,2025-06-10,C080,Laptop,Electronics,1000,3,0.15,2550.0,710.36,West,Bank Transfer
+ORD0037,2025-06-18,C015,Smartwatch,Electronics,250,4,0.0,1000.0,349.71,East,Credit Card
+ORD0038,2025-03-30,C062,Smartwatch,Electronics,250,5,0.1,1125.0,467.01,West,Cash
+ORD0039,2025-06-25,C062,Desk,Furniture,350,2,0.0,700.0,278.15,West,PayPal
+ORD0040,2025-09-26,C047,Desk,Furniture,350,3,0.1,945.0,379.17,West,Cash
+ORD0041,2025-03-14,C062,Smartphone,Electronics,600,1,0.05,570.0,258.82,South,Cash
+ORD0042,2025-09-02,C051,Notebook,Stationery,15,3,0.1,40.5,14.31,North,Bank Transfer
+ORD0043,2025-03-18,C055,Desk,Furniture,350,3,0.0,1050.0,490.7,East,Bank Transfer
+ORD0044,2025-06-08,C064,Headphones,Electronics,150,3,0.05,427.5,182.54,South,Bank Transfer
+ORD0045,2025-11-20,C003,Premium Pen,Stationery,50,3,0.05,142.5,57.97,East,Cash
+ORD0046,2025-04-08,C051,Laptop,Electronics,1000,2,0.1,1800.0,696.24,East,Credit Card
+ORD0047,2025-04-12,C007,Notebook,Stationery,15,4,0.05,57.0,25.95,East,Credit Card
+ORD0048,2025-05-12,C021,Organizer,Stationery,30,5,0.05,142.5,64.8,South,Cash
+ORD0049,2025-04-12,C073,Headphones,Electronics,150,3,0.0,450.0,207.61,North,Cash
+ORD0050,2025-01-19,C039,Office Chair,Furniture,200,3,0.0,600.0,293.93,East,PayPal
+ORD0051,2025-03-23,C018,Desk,Furniture,350,3,0.0,1050.0,393.44,North,Bank Transfer
+ORD0052,2025-10-06,C004,Organizer,Stationery,30,4,0.0,120.0,53.1,North,Bank Transfer
+ORD0053,2025-12-05,C089,Desk,Furniture,350,1,0.2,280.0,85.42,West,Cash
+ORD0054,2025-12-31,C060,Smartwatch,Electronics,250,1,0.1,225.0,83.4,South,Cash
+ORD0055,2025-11-27,C014,Headphones,Electronics,150,2,0.2,240.0,50.23,South,Credit Card
+ORD0056,2025-05-09,C009,Smartwatch,Electronics,250,1,0.0,250.0,81.47,West,Cash
+ORD0057,2025-12-10,C090,Smartphone,Electronics,600,3,0.15,1530.0,356.73,West,Credit Card
+ORD0058,2025-11-06,C053,Smartwatch,Electronics,250,3,0.1,675.0,190.87,North,Cash
+ORD0059,2025-03-30,C002,Smartphone,Electronics,600,3,0.05,1710.0,635.62,East,PayPal
+ORD0060,2025-08-01,C084,Smartphone,Electronics,600,2,0.05,1140.0,373.49,South,PayPal
+ORD0061,2025-05-23,C092,Organizer,Stationery,30,3,0.0,90.0,35.05,East,Credit Card
+ORD0062,2025-03-06,C060,Desk,Furniture,350,1,0.1,315.0,124.86,East,Bank Transfer
+ORD0063,2025-03-17,C071,Office Chair,Furniture,200,4,0.05,760.0,326.63,West,PayPal
+ORD0064,2025-07-18,C044,Smartwatch,Electronics,250,4,0.0,1000.0,440.72,East,Credit Card
+ORD0065,2025-05-23,C008,Headphones,Electronics,150,5,0.0,750.0,238.38,North,Cash
+ORD0066,2025-11-12,C047,Smartphone,Electronics,600,1,0.15,510.0,144.31,West,Cash
+ORD0067,2025-04-03,C035,Desk,Furniture,350,3,0.15,892.5,213.38,East,Credit Card
+ORD0068,2025-11-01,C078,Laptop,Electronics,1000,4,0.2,3200.0,922.75,West,Bank Transfer
+ORD0069,2025-08-12,C081,Notebook,Stationery,15,1,0.05,14.25,5.53,North,Credit Card
+ORD0070,2025-10-18,C036,Organizer,Stationery,30,4,0.0,120.0,56.99,North,Credit Card
+ORD0071,2025-04-12,C050,Office Chair,Furniture,200,3,0.0,600.0,279.44,East,PayPal
+ORD0072,2025-09-24,C004,Bookshelf,Furniture,180,4,0.0,720.0,240.86,West,Credit Card
+ORD0073,2025-12-21,C002,Organizer,Stationery,30,5,0.0,150.0,57.45,East,Credit Card
+ORD0074,2025-04-20,C006,Laptop,Electronics,1000,5,0.0,5000.0,2162.47,East,Cash
+ORD0075,2025-11-26,C054,Notebook,Stationery,15,4,0.0,60.0,20.37,West,PayPal
+ORD0076,2025-09-22,C004,Laptop,Electronics,1000,1,0.0,1000.0,450.7,East,Cash
+ORD0077,2025-01-03,C054,Smartwatch,Electronics,250,1,0.15,212.5,38.7,North,Cash
+ORD0078,2025-03-26,C093,Smartphone,Electronics,600,1,0.0,600.0,258.62,West,Bank Transfer
+ORD0079,2025-10-09,C063,Office Chair,Furniture,200,4,0.15,680.0,226.03,West,Bank Transfer
+ORD0080,2025-11-24,C018,Premium Pen,Stationery,50,1,0.05,47.5,19.38,West,PayPal
+ORD0081,2025-10-31,C090,Smartphone,Electronics,600,3,0.0,1800.0,856.04,West,PayPal
+ORD0082,2025-04-27,C044,Premium Pen,Stationery,50,5,0.0,250.0,119.44,East,Bank Transfer
+ORD0083,2025-08-09,C034,Notebook,Stationery,15,3,0.0,45.0,16.67,East,Bank Transfer
+ORD0084,2025-06-03,C074,Desk,Furniture,350,1,0.0,350.0,113.74,North,Bank Transfer
+ORD0085,2025-06-02,C062,Bookshelf,Furniture,180,3,0.05,513.0,157.62,South,Bank Transfer
+ORD0086,2025-01-12,C100,Headphones,Electronics,150,1,0.0,150.0,70.77,South,Bank Transfer
+ORD0087,2025-05-13,C014,Smartphone,Electronics,600,4,0.0,2400.0,938.12,North,Cash
+ORD0088,2025-10-31,C095,Office Chair,Furniture,200,3,0.0,600.0,287.33,South,PayPal
+ORD0089,2025-10-20,C048,Laptop,Electronics,1000,4,0.2,3200.0,1163.76,North,Cash
+ORD0090,2025-10-27,C015,Office Chair,Furniture,200,4,0.1,720.0,214.98,East,Cash
+ORD0091,2025-08-16,C072,Notebook,Stationery,15,2,0.1,27.0,8.79,West,Credit Card
+ORD0092,2025-09-28,C078,Premium Pen,Stationery,50,1,0.0,50.0,24.18,West,Cash
+ORD0093,2025-02-12,C087,Laptop,Electronics,1000,5,0.1,4500.0,1965.06,East,Bank Transfer
+ORD0094,2025-12-09,C062,Headphones,Electronics,150,1,0.1,135.0,30.31,West,Bank Transfer
+ORD0095,2025-11-22,C040,Headphones,Electronics,150,5,0.05,712.5,333.0,West,Credit Card
+ORD0096,2025-10-29,C085,Smartphone,Electronics,600,1,0.2,480.0,126.66,South,Credit Card
+ORD0097,2025-12-30,C080,Notebook,Stationery,15,4,0.0,60.0,23.94,East,Credit Card
+ORD0098,2025-01-21,C082,Desk,Furniture,350,3,0.15,892.5,342.87,South,Credit Card
+ORD0099,2025-04-17,C053,Notebook,Stationery,15,3,0.15,38.25,14.23,South,Credit Card
+ORD0100,2025-12-02,C024,Premium Pen,Stationery,50,2,0.0,100.0,42.96,West,Cash
+ORD0101,2025-10-30,C026,Office Chair,Furniture,200,5,0.0,1000.0,347.66,West,Credit Card
+ORD0102,2025-04-27,C089,Headphones,Electronics,150,5,0.2,600.0,148.94,East,Cash
+ORD0103,2025-05-04,C060,Office Chair,Furniture,200,5,0.0,1000.0,372.42,West,PayPal
+ORD0104,2025-10-08,C041,Office Chair,Furniture,200,4,0.05,760.0,202.37,West,Credit Card
+ORD0105,2025-10-19,C029,Office Chair,Furniture,200,5,0.2,800.0,146.4,East,Credit Card
+ORD0106,2025-07-22,C015,Headphones,Electronics,150,3,0.05,427.5,163.41,West,Cash
+ORD0107,2025-02-20,C045,Organizer,Stationery,30,4,0.0,120.0,49.29,South,PayPal
+ORD0108,2025-09-28,C065,Smartwatch,Electronics,250,1,0.05,237.5,81.56,East,Cash
+ORD0109,2025-11-20,C089,Premium Pen,Stationery,50,5,0.0,250.0,91.73,West,Cash
+ORD0110,2025-10-04,C071,Organizer,Stationery,30,5,0.05,142.5,52.48,North,Credit Card
+ORD0111,2025-05-21,C009,Premium Pen,Stationery,50,1,0.0,50.0,18.55,East,Bank Transfer
+ORD0112,2025-10-02,C088,Laptop,Electronics,1000,5,0.05,4750.0,2226.47,East,Bank Transfer
+ORD0113,2025-10-17,C001,Notebook,Stationery,15,1,0.05,14.25,5.46,North,Cash
+ORD0114,2025-11-30,C008,Notebook,Stationery,15,4,0.1,54.0,20.65,West,Credit Card
+ORD0115,2025-02-21,C088,Bookshelf,Furniture,180,3,0.05,513.0,229.05,West,PayPal
+ORD0116,2025-01-27,C063,Notebook,Stationery,15,1,0.05,14.25,6.45,East,Bank Transfer
+ORD0117,2025-06-06,C011,Headphones,Electronics,150,2,0.05,285.0,98.81,East,PayPal
+ORD0118,2025-08-27,C081,Desk,Furniture,350,1,0.0,350.0,138.35,West,Bank Transfer
+ORD0119,2025-06-05,C008,Smartphone,Electronics,600,5,0.05,2850.0,1197.85,West,Credit Card
+ORD0120,2025-10-18,C035,Bookshelf,Furniture,180,4,0.0,720.0,292.18,South,Cash
+ORD0121,2025-05-16,C035,Smartphone,Electronics,600,4,0.15,2040.0,603.73,East,PayPal
+ORD0122,2025-05-24,C033,Premium Pen,Stationery,50,1,0.0,50.0,23.05,East,PayPal
+ORD0123,2025-04-16,C005,Smartphone,Electronics,600,3,0.0,1800.0,665.25,North,Cash
+ORD0124,2025-06-07,C041,Smartphone,Electronics,600,2,0.05,1140.0,352.58,South,PayPal
+ORD0125,2025-05-26,C028,Bookshelf,Furniture,180,4,0.0,720.0,246.03,West,Bank Transfer
+ORD0126,2025-01-02,C007,Laptop,Electronics,1000,5,0.0,5000.0,1897.53,South,Cash
+ORD0127,2025-03-18,C073,Office Chair,Furniture,200,5,0.05,950.0,347.67,West,Bank Transfer
+ORD0128,2025-05-12,C072,Notebook,Stationery,15,3,0.05,42.75,19.7,West,Bank Transfer
+ORD0129,2025-03-31,C012,Notebook,Stationery,15,4,0.1,54.0,20.55,South,Credit Card
+ORD0130,2025-12-11,C034,Headphones,Electronics,150,1,0.0,150.0,72.2,East,Bank Transfer
+ORD0131,2025-12-16,C033,Bookshelf,Furniture,180,5,0.05,855.0,231.51,West,Credit Card
+ORD0132,2025-09-20,C048,Headphones,Electronics,150,3,0.0,450.0,212.84,South,PayPal
+ORD0133,2025-12-17,C023,Desk,Furniture,350,4,0.05,1330.0,587.5,North,PayPal
+ORD0134,2025-04-18,C062,Desk,Furniture,350,4,0.05,1330.0,380.92,South,Credit Card
+ORD0135,2025-03-15,C088,Headphones,Electronics,150,4,0.05,570.0,156.73,North,Bank Transfer
+ORD0136,2025-02-08,C037,Bookshelf,Furniture,180,4,0.0,720.0,249.72,West,Cash
+ORD0137,2025-06-08,C099,Headphones,Electronics,150,4,0.0,600.0,299.35,South,Cash
+ORD0138,2025-03-12,C044,Notebook,Stationery,15,5,0.0,75.0,37.48,South,Credit Card
+ORD0139,2025-11-08,C086,Organizer,Stationery,30,3,0.0,90.0,38.19,North,PayPal
+ORD0140,2025-08-29,C091,Smartwatch,Electronics,250,4,0.0,1000.0,471.32,South,PayPal
+ORD0141,2025-10-25,C035,Smartphone,Electronics,600,2,0.05,1140.0,535.59,South,Cash
+ORD0142,2025-02-05,C065,Smartwatch,Electronics,250,2,0.0,500.0,203.59,West,Credit Card
+ORD0143,2025-03-25,C099,Bookshelf,Furniture,180,3,0.15,459.0,87.15,South,Cash
+ORD0144,2025-09-20,C047,Smartwatch,Electronics,250,1,0.0,250.0,108.81,East,Bank Transfer
+ORD0145,2025-11-06,C078,Desk,Furniture,350,1,0.1,315.0,93.72,North,Bank Transfer
+ORD0146,2025-06-21,C003,Premium Pen,Stationery,50,1,0.05,47.5,15.98,South,Credit Card
+ORD0147,2025-06-22,C001,Smartphone,Electronics,600,2,0.0,1200.0,539.74,North,Credit Card
+ORD0148,2025-12-28,C005,Office Chair,Furniture,200,1,0.0,200.0,73.98,North,Bank Transfer
+ORD0149,2025-02-16,C090,Bookshelf,Furniture,180,5,0.05,855.0,366.78,North,PayPal
+ORD0150,2025-05-21,C014,Smartphone,Electronics,600,4,0.0,2400.0,1141.44,South,Credit Card
+ORD0151,2025-04-28,C027,Smartwatch,Electronics,250,2,0.15,425.0,104.86,South,Bank Transfer
+ORD0152,2025-10-04,C009,Desk,Furniture,350,3,0.05,997.5,448.68,North,Bank Transfer
+ORD0153,2025-08-02,C079,Laptop,Electronics,1000,3,0.15,2550.0,451.85,East,PayPal
+ORD0154,2025-08-08,C015,Organizer,Stationery,30,4,0.0,120.0,55.6,North,PayPal
+ORD0155,2025-01-26,C090,Office Chair,Furniture,200,2,0.1,360.0,112.47,East,PayPal
+ORD0156,2025-01-09,C042,Organizer,Stationery,30,1,0.05,28.5,11.03,North,PayPal
+ORD0157,2025-09-28,C077,Smartphone,Electronics,600,1,0.1,540.0,224.83,West,Cash
+ORD0158,2025-01-10,C051,Desk,Furniture,350,5,0.0,1750.0,865.25,North,PayPal
+ORD0159,2025-05-01,C063,Desk,Furniture,350,5,0.05,1662.5,569.54,North,Cash
+ORD0160,2025-05-05,C096,Smartwatch,Electronics,250,1,0.0,250.0,84.66,South,Credit Card
+ORD0161,2025-06-19,C052,Notebook,Stationery,15,3,0.1,40.5,10.42,East,Bank Transfer
+ORD0162,2025-03-13,C096,Smartwatch,Electronics,250,3,0.0,750.0,302.59,West,Cash
+ORD0163,2025-06-01,C004,Notebook,Stationery,15,5,0.15,63.75,14.59,East,Credit Card
+ORD0164,2025-07-27,C094,Notebook,Stationery,15,4,0.0,60.0,21.93,West,Credit Card
+ORD0165,2025-02-18,C023,Office Chair,Furniture,200,1,0.1,180.0,51.03,North,Cash
+ORD0166,2025-06-03,C015,Smartwatch,Electronics,250,5,0.15,1062.5,314.35,South,Credit Card
+ORD0167,2025-12-13,C043,Laptop,Electronics,1000,5,0.1,4500.0,1366.59,South,Credit Card
+ORD0168,2025-10-20,C029,Headphones,Electronics,150,1,0.05,142.5,43.33,East,Cash
+ORD0169,2025-03-09,C036,Headphones,Electronics,150,1,0.0,150.0,63.06,South,Credit Card
+ORD0170,2025-02-19,C013,Smartwatch,Electronics,250,3,0.2,600.0,104.1,East,PayPal
+ORD0171,2025-06-01,C032,Smartwatch,Electronics,250,4,0.0,1000.0,381.6,East,PayPal
+ORD0172,2025-01-19,C071,Organizer,Stationery,30,4,0.05,114.0,50.02,West,Bank Transfer
+ORD0173,2025-04-10,C059,Office Chair,Furniture,200,1,0.05,190.0,89.01,East,Credit Card
+ORD0174,2025-03-01,C086,Smartwatch,Electronics,250,2,0.1,450.0,163.72,West,Bank Transfer
+ORD0175,2025-06-16,C028,Organizer,Stationery,30,5,0.0,150.0,58.6,South,PayPal
+ORD0176,2025-07-21,C066,Notebook,Stationery,15,5,0.05,71.25,21.15,East,PayPal
+ORD0177,2025-12-11,C042,Desk,Furniture,350,1,0.1,315.0,131.08,East,PayPal
+ORD0178,2025-05-26,C045,Desk,Furniture,350,2,0.0,700.0,237.97,North,Credit Card
+ORD0179,2025-06-13,C062,Notebook,Stationery,15,3,0.15,38.25,7.98,East,Credit Card
+ORD0180,2025-08-30,C057,Bookshelf,Furniture,180,1,0.0,180.0,84.58,East,PayPal
+ORD0181,2025-03-10,C006,Organizer,Stationery,30,1,0.0,30.0,9.89,North,Bank Transfer
+ORD0182,2025-06-24,C028,Organizer,Stationery,30,5,0.0,150.0,45.26,North,Bank Transfer
+ORD0183,2025-02-18,C028,Notebook,Stationery,15,1,0.0,15.0,5.32,South,Cash
+ORD0184,2025-04-18,C044,Laptop,Electronics,1000,1,0.15,850.0,193.05,East,PayPal
+ORD0185,2025-08-14,C084,Premium Pen,Stationery,50,1,0.0,50.0,15.06,South,Bank Transfer
+ORD0186,2025-06-10,C030,Smartphone,Electronics,600,5,0.0,3000.0,1136.71,South,PayPal
+ORD0187,2025-04-29,C062,Notebook,Stationery,15,3,0.0,45.0,19.73,North,Bank Transfer
+ORD0188,2025-05-29,C075,Smartwatch,Electronics,250,3,0.05,712.5,211.87,West,Cash
+ORD0189,2025-05-30,C092,Smartwatch,Electronics,250,1,0.05,237.5,81.78,South,Cash
+ORD0190,2025-10-20,C089,Office Chair,Furniture,200,5,0.0,1000.0,383.76,West,PayPal
+ORD0191,2025-05-23,C062,Notebook,Stationery,15,3,0.0,45.0,20.22,East,Bank Transfer
+ORD0192,2025-06-09,C097,Office Chair,Furniture,200,3,0.15,510.0,119.24,North,Credit Card
+ORD0193,2025-01-11,C001,Notebook,Stationery,15,3,0.0,45.0,21.76,East,Cash
+ORD0194,2025-05-18,C027,Organizer,Stationery,30,5,0.0,150.0,47.27,East,PayPal
+ORD0195,2025-03-19,C062,Smartphone,Electronics,600,5,0.0,3000.0,1304.51,North,PayPal
+ORD0196,2025-03-18,C077,Organizer,Stationery,30,1,0.1,27.0,11.23,East,Bank Transfer
+ORD0197,2025-09-11,C003,Premium Pen,Stationery,50,4,0.0,200.0,82.31,North,PayPal
+ORD0198,2025-09-15,C070,Desk,Furniture,350,3,0.05,997.5,463.58,West,Cash
+ORD0199,2025-11-16,C072,Headphones,Electronics,150,4,0.0,600.0,217.84,East,PayPal
+ORD0200,2025-10-18,C027,Notebook,Stationery,15,5,0.2,60.0,8.96,North,PayPal
+ORD0201,2025-09-20,C009,Premium Pen,Stationery,50,5,0.0,250.0,83.14,South,Credit Card
+ORD0202,2025-03-26,C062,Desk,Furniture,350,5,0.1,1575.0,655.42,East,Credit Card
+ORD0203,2025-05-26,C037,Bookshelf,Furniture,180,4,0.0,720.0,341.82,West,Cash
+ORD0204,2025-11-19,C097,Smartphone,Electronics,600,5,0.0,3000.0,1011.94,North,Bank Transfer
+ORD0205,2025-02-11,C051,Office Chair,Furniture,200,1,0.1,180.0,43.03,East,Credit Card
+ORD0206,2025-05-05,C044,Office Chair,Furniture,200,5,0.0,1000.0,407.87,East,Bank Transfer
+ORD0207,2025-06-16,C024,Organizer,Stationery,30,2,0.15,51.0,15.01,East,Cash
+ORD0208,2025-08-29,C079,Smartwatch,Electronics,250,4,0.15,850.0,286.35,West,Credit Card
+ORD0209,2025-10-07,C059,Desk,Furniture,350,2,0.15,595.0,119.8,North,Bank Transfer
+ORD0210,2025-07-07,C032,Bookshelf,Furniture,180,5,0.0,900.0,333.92,South,Credit Card
+ORD0211,2025-10-29,C096,Premium Pen,Stationery,50,1,0.1,45.0,17.12,South,Cash
+ORD0212,2025-01-19,C088,Smartphone,Electronics,600,3,0.0,1800.0,792.44,South,Cash
+ORD0213,2025-03-09,C052,Desk,Furniture,350,5,0.15,1487.5,300.58,North,Credit Card
+ORD0214,2025-08-06,C062,Bookshelf,Furniture,180,1,0.05,171.0,80.51,South,Bank Transfer
+ORD0215,2025-04-12,C058,Headphones,Electronics,150,4,0.1,540.0,201.27,West,PayPal
+ORD0216,2025-02-11,C052,Notebook,Stationery,15,2,0.0,30.0,11.67,North,PayPal
+ORD0217,2025-10-15,C012,Office Chair,Furniture,200,2,0.05,380.0,168.14,East,Credit Card
+ORD0218,2025-06-16,C039,Premium Pen,Stationery,50,2,0.0,100.0,48.16,West,Bank Transfer
+ORD0219,2025-04-19,C002,Office Chair,Furniture,200,4,0.1,720.0,189.56,East,PayPal
+ORD0220,2025-02-05,C003,Premium Pen,Stationery,50,1,0.0,50.0,16.06,South,Cash
+ORD0221,2025-08-20,C056,Organizer,Stationery,30,4,0.05,114.0,34.23,West,Bank Transfer
+ORD0222,2025-08-17,C081,Smartwatch,Electronics,250,2,0.1,450.0,110.12,North,PayPal
+ORD0223,2025-12-19,C059,Premium Pen,Stationery,50,5,0.05,237.5,84.84,West,Bank Transfer
+ORD0224,2025-06-13,C002,Office Chair,Furniture,200,3,0.0,600.0,202.53,East,Credit Card
+ORD0225,2025-03-14,C002,Organizer,Stationery,30,4,0.05,114.0,44.78,North,Bank Transfer
+ORD0226,2025-05-16,C092,Premium Pen,Stationery,50,4,0.0,200.0,73.35,West,PayPal
+ORD0227,2025-12-19,C054,Headphones,Electronics,150,1,0.0,150.0,45.33,West,Credit Card
+ORD0228,2025-03-11,C087,Smartwatch,Electronics,250,1,0.0,250.0,113.71,West,Bank Transfer
+ORD0229,2025-07-15,C096,Premium Pen,Stationery,50,4,0.0,200.0,84.4,West,Cash
+ORD0230,2025-09-26,C097,Organizer,Stationery,30,2,0.0,60.0,24.24,North,PayPal
+ORD0231,2025-02-18,C001,Desk,Furniture,350,3,0.1,945.0,391.02,East,Credit Card
+ORD0232,2025-11-12,C019,Laptop,Electronics,1000,1,0.0,1000.0,483.79,West,Bank Transfer
+ORD0233,2025-05-10,C002,Bookshelf,Furniture,180,2,0.0,360.0,120.26,North,Cash
+ORD0234,2025-01-05,C053,Laptop,Electronics,1000,5,0.15,4250.0,773.21,East,PayPal
+ORD0235,2025-01-27,C044,Laptop,Electronics,1000,1,0.0,1000.0,419.05,West,Cash
+ORD0236,2025-06-09,C090,Smartphone,Electronics,600,2,0.05,1140.0,518.96,East,Bank Transfer
+ORD0237,2025-05-29,C032,Headphones,Electronics,150,2,0.1,270.0,116.05,East,Bank Transfer
+ORD0238,2025-09-21,C070,Desk,Furniture,350,3,0.15,892.5,180.32,North,Credit Card
+ORD0239,2025-08-18,C032,Notebook,Stationery,15,3,0.1,40.5,13.83,East,Cash
+ORD0240,2025-07-19,C068,Premium Pen,Stationery,50,5,0.1,225.0,84.0,North,Credit Card
+ORD0241,2025-02-19,C055,Bookshelf,Furniture,180,2,0.1,324.0,109.69,West,PayPal
+ORD0242,2025-03-08,C075,Smartwatch,Electronics,250,2,0.0,500.0,218.17,East,Credit Card
+ORD0243,2025-10-27,C056,Desk,Furniture,350,3,0.1,945.0,317.3,East,PayPal
+ORD0244,2025-02-27,C017,Office Chair,Furniture,200,1,0.0,200.0,65.62,South,Bank Transfer
+ORD0245,2025-09-16,C038,Notebook,Stationery,15,1,0.15,12.75,3.47,West,Bank Transfer
+ORD0246,2025-12-08,C024,Smartphone,Electronics,600,4,0.0,2400.0,866.57,West,Cash
+ORD0247,2025-11-22,C069,Smartphone,Electronics,600,3,0.05,1710.0,678.72,South,PayPal
+ORD0248,2025-05-10,C098,Desk,Furniture,350,4,0.0,1400.0,493.22,South,Bank Transfer
+ORD0249,2025-08-03,C070,Organizer,Stationery,30,3,0.1,81.0,24.0,North,Cash
+ORD0250,2025-06-21,C086,Laptop,Electronics,1000,5,0.0,5000.0,2380.44,North,Cash
+ORD0251,2025-09-15,C011,Office Chair,Furniture,200,2,0.15,340.0,94.19,East,Credit Card
+ORD0252,2025-04-12,C016,Smartphone,Electronics,600,5,0.1,2700.0,1045.95,East,Cash
+ORD0253,2025-07-28,C097,Bookshelf,Furniture,180,3,0.0,540.0,183.16,East,Bank Transfer
+ORD0254,2025-10-18,C073,Smartphone,Electronics,600,2,0.1,1080.0,377.77,East,Credit Card
+ORD0255,2025-12-20,C059,Smartwatch,Electronics,250,1,0.1,225.0,50.27,North,PayPal
+ORD0256,2025-10-13,C070,Premium Pen,Stationery,50,1,0.05,47.5,21.57,West,PayPal
+ORD0257,2025-04-26,C080,Smartphone,Electronics,600,4,0.0,2400.0,825.43,East,Bank Transfer
+ORD0258,2025-09-21,C093,Smartwatch,Electronics,250,3,0.0,750.0,273.94,West,Bank Transfer
+ORD0259,2025-05-30,C003,Desk,Furniture,350,3,0.0,1050.0,363.83,East,Credit Card
+ORD0260,2025-10-27,C020,Desk,Furniture,350,1,0.0,350.0,153.47,South,Credit Card
+ORD0261,2025-02-05,C059,Notebook,Stationery,15,5,0.15,63.75,18.87,East,Bank Transfer
+ORD0262,2025-11-29,C036,Smartphone,Electronics,600,2,0.0,1200.0,408.84,East,Bank Transfer
+ORD0263,2025-10-14,C019,Bookshelf,Furniture,180,5,0.1,810.0,318.14,East,PayPal
+ORD0264,2025-10-30,C090,Smartphone,Electronics,600,5,0.0,3000.0,1364.38,North,PayPal
+ORD0265,2025-11-07,C067,Bookshelf,Furniture,180,1,0.05,171.0,61.16,South,PayPal
+ORD0266,2025-07-27,C019,Headphones,Electronics,150,1,0.1,135.0,44.29,East,Bank Transfer
+ORD0267,2025-04-16,C020,Notebook,Stationery,15,1,0.15,12.75,4.4,East,Cash
+ORD0268,2025-06-07,C096,Headphones,Electronics,150,4,0.0,600.0,264.23,West,Bank Transfer
+ORD0269,2025-05-01,C071,Smartphone,Electronics,600,5,0.0,3000.0,1333.29,South,Bank Transfer
+ORD0270,2025-02-24,C052,Notebook,Stationery,15,3,0.0,45.0,15.56,East,PayPal
+ORD0271,2025-01-12,C033,Headphones,Electronics,150,2,0.0,300.0,110.89,West,Bank Transfer
+ORD0272,2025-05-25,C040,Laptop,Electronics,1000,4,0.0,4000.0,1334.07,West,Credit Card
+ORD0273,2025-05-16,C039,Smartphone,Electronics,600,3,0.0,1800.0,548.83,North,Bank Transfer
+ORD0274,2025-01-03,C082,Headphones,Electronics,150,5,0.0,750.0,303.88,West,Bank Transfer
+ORD0275,2025-05-24,C001,Laptop,Electronics,1000,1,0.1,900.0,386.66,East,Bank Transfer
+ORD0276,2025-01-30,C011,Laptop,Electronics,1000,5,0.0,5000.0,2451.91,North,Bank Transfer
+ORD0277,2025-08-25,C092,Desk,Furniture,350,2,0.0,700.0,308.61,North,Cash
+ORD0278,2025-10-06,C057,Smartphone,Electronics,600,4,0.0,2400.0,752.38,East,Bank Transfer
+ORD0279,2025-12-14,C089,Laptop,Electronics,1000,4,0.1,3600.0,1181.43,South,Credit Card
+ORD0280,2025-04-25,C050,Desk,Furniture,350,2,0.15,595.0,206.95,West,Credit Card
+ORD0281,2025-04-14,C023,Headphones,Electronics,150,3,0.05,427.5,166.57,North,Bank Transfer
+ORD0282,2025-04-28,C031,Smartwatch,Electronics,250,3,0.1,675.0,210.21,South,PayPal
+ORD0283,2025-01-05,C094,Smartphone,Electronics,600,4,0.0,2400.0,886.58,East,Cash
+ORD0284,2025-12-26,C042,Notebook,Stationery,15,4,0.05,57.0,25.15,West,Bank Transfer
+ORD0285,2025-09-05,C099,Bookshelf,Furniture,180,1,0.0,180.0,54.83,West,Bank Transfer
+ORD0286,2025-12-30,C007,Bookshelf,Furniture,180,3,0.0,540.0,211.16,North,Bank Transfer
+ORD0287,2025-11-17,C016,Headphones,Electronics,150,2,0.1,270.0,111.86,West,PayPal
+ORD0288,2025-05-01,C090,Organizer,Stationery,30,3,0.15,76.5,15.41,West,PayPal
+ORD0289,2025-10-13,C060,Organizer,Stationery,30,1,0.0,30.0,14.55,West,PayPal
+ORD0290,2025-05-29,C002,Headphones,Electronics,150,4,0.05,570.0,161.07,West,Cash
+ORD0291,2025-03-25,C001,Laptop,Electronics,1000,4,0.05,3800.0,1002.75,East,Credit Card
+ORD0292,2025-08-19,C048,Smartphone,Electronics,600,1,0.0,600.0,215.95,South,Cash
+ORD0293,2025-10-15,C012,Bookshelf,Furniture,180,2,0.0,360.0,124.53,East,PayPal
+ORD0294,2025-06-10,C069,Bookshelf,Furniture,180,4,0.0,720.0,311.43,East,Credit Card
+ORD0295,2025-09-29,C037,Laptop,Electronics,1000,5,0.0,5000.0,1558.42,North,Credit Card
+ORD0296,2025-02-07,C032,Bookshelf,Furniture,180,4,0.0,720.0,283.72,West,PayPal
+ORD0297,2025-08-14,C009,Notebook,Stationery,15,5,0.0,75.0,26.51,East,PayPal
+ORD0298,2025-05-22,C099,Smartphone,Electronics,600,1,0.0,600.0,189.11,West,Cash
+ORD0299,2025-10-19,C019,Premium Pen,Stationery,50,1,0.1,45.0,10.25,East,PayPal
+ORD0300,2025-05-31,C048,Bookshelf,Furniture,180,4,0.05,684.0,204.02,East,Credit Card
+ORD0301,2025-04-24,C080,Headphones,Electronics,150,3,0.2,360.0,107.73,North,Bank Transfer
+ORD0302,2025-08-25,C003,Notebook,Stationery,15,5,0.0,75.0,23.0,South,PayPal
+ORD0303,2025-03-07,C020,Bookshelf,Furniture,180,2,0.1,324.0,98.78,South,PayPal
+ORD0304,2025-12-27,C024,Notebook,Stationery,15,4,0.15,51.0,9.83,East,Cash
+ORD0305,2025-12-07,C054,Desk,Furniture,350,2,0.05,665.0,220.35,North,Cash
+ORD0306,2025-09-15,C033,Premium Pen,Stationery,50,4,0.0,200.0,87.71,West,PayPal
+ORD0307,2025-09-06,C024,Office Chair,Furniture,200,3,0.1,540.0,195.6,West,Credit Card
+ORD0308,2025-11-27,C075,Headphones,Electronics,150,3,0.0,450.0,175.46,East,Credit Card
+ORD0309,2025-11-19,C072,Headphones,Electronics,150,3,0.0,450.0,153.9,South,Bank Transfer
+ORD0310,2025-06-29,C036,Smartphone,Electronics,600,3,0.05,1710.0,695.53,North,PayPal
+ORD0311,2025-07-09,C038,Notebook,Stationery,15,1,0.05,14.25,5.01,South,Cash
+ORD0312,2025-06-03,C084,Laptop,Electronics,1000,1,0.0,1000.0,430.88,West,Credit Card
+ORD0313,2025-07-15,C099,Headphones,Electronics,150,5,0.15,637.5,140.13,South,Bank Transfer
+ORD0314,2025-11-07,C089,Notebook,Stationery,15,2,0.05,28.5,10.7,West,PayPal
+ORD0315,2025-09-19,C099,Notebook,Stationery,15,4,0.0,60.0,29.08,North,Credit Card
+ORD0316,2025-05-23,C025,Smartwatch,Electronics,250,4,0.15,850.0,316.79,North,PayPal
+ORD0317,2025-12-08,C093,Smartwatch,Electronics,250,1,0.0,250.0,121.94,East,PayPal
+ORD0318,2025-11-12,C018,Office Chair,Furniture,200,4,0.2,640.0,160.11,East,Credit Card
+ORD0319,2025-04-11,C082,Desk,Furniture,350,1,0.05,332.5,150.06,South,Credit Card
+ORD0320,2025-09-01,C066,Office Chair,Furniture,200,5,0.0,1000.0,477.17,North,Credit Card
+ORD0321,2025-01-12,C054,Bookshelf,Furniture,180,2,0.1,324.0,76.24,North,PayPal
+ORD0322,2025-08-27,C035,Laptop,Electronics,1000,5,0.05,4750.0,1377.34,East,PayPal
+ORD0323,2025-02-18,C080,Bookshelf,Furniture,180,3,0.1,486.0,167.17,West,Bank Transfer
+ORD0324,2025-02-11,C061,Organizer,Stationery,30,3,0.2,72.0,9.26,South,Cash
+ORD0325,2025-06-15,C041,Bookshelf,Furniture,180,3,0.1,486.0,215.98,South,PayPal
+ORD0326,2025-03-23,C100,Smartphone,Electronics,600,5,0.05,2850.0,981.61,East,Cash
+ORD0327,2025-10-18,C033,Bookshelf,Furniture,180,4,0.15,612.0,163.23,North,Credit Card
+ORD0328,2025-06-07,C068,Office Chair,Furniture,200,2,0.05,380.0,143.4,East,PayPal
+ORD0329,2025-08-04,C033,Headphones,Electronics,150,3,0.0,450.0,189.27,East,Bank Transfer
+ORD0330,2025-06-07,C014,Headphones,Electronics,150,3,0.15,382.5,116.52,East,Bank Transfer
+ORD0331,2025-05-14,C021,Smartwatch,Electronics,250,3,0.0,750.0,312.76,East,Cash
+ORD0332,2025-03-08,C048,Laptop,Electronics,1000,2,0.1,1800.0,507.8,West,Credit Card
+ORD0333,2025-12-02,C020,Laptop,Electronics,1000,3,0.15,2550.0,968.79,West,Cash
+ORD0334,2025-01-07,C008,Smartphone,Electronics,600,2,0.1,1080.0,432.57,North,Credit Card
+ORD0335,2025-01-14,C007,Office Chair,Furniture,200,3,0.05,570.0,248.34,East,Bank Transfer
+ORD0336,2025-03-14,C067,Smartwatch,Electronics,250,5,0.1,1125.0,434.38,West,Cash
+ORD0337,2025-06-12,C017,Organizer,Stationery,30,5,0.0,150.0,59.24,North,Bank Transfer
+ORD0338,2025-03-07,C033,Laptop,Electronics,1000,2,0.15,1700.0,655.52,East,Bank Transfer
+ORD0339,2025-12-13,C048,Headphones,Electronics,150,5,0.0,750.0,244.77,South,Credit Card
+ORD0340,2025-05-10,C076,Bookshelf,Furniture,180,2,0.0,360.0,158.59,West,Cash
+ORD0341,2025-07-25,C059,Bookshelf,Furniture,180,5,0.0,900.0,420.74,North,Cash
+ORD0342,2025-10-03,C086,Smartwatch,Electronics,250,5,0.05,1187.5,393.59,South,Bank Transfer
+ORD0343,2025-09-13,C022,Office Chair,Furniture,200,2,0.05,380.0,176.95,East,Bank Transfer
+ORD0344,2025-09-23,C030,Office Chair,Furniture,200,4,0.1,720.0,220.81,East,Credit Card
+ORD0345,2025-01-25,C038,Desk,Furniture,350,5,0.0,1750.0,630.63,East,PayPal
+ORD0346,2025-10-08,C051,Premium Pen,Stationery,50,3,0.0,150.0,68.55,West,PayPal
+ORD0347,2025-09-10,C054,Laptop,Electronics,1000,4,0.0,4000.0,1966.43,North,Bank Transfer
+ORD0348,2025-11-06,C008,Office Chair,Furniture,200,2,0.0,400.0,170.91,South,PayPal
+ORD0349,2025-10-16,C027,Headphones,Electronics,150,4,0.05,570.0,258.17,North,PayPal
+ORD0350,2025-06-13,C027,Smartwatch,Electronics,250,1,0.0,250.0,119.18,West,PayPal
+ORD0351,2025-04-05,C098,Organizer,Stationery,30,1,0.0,30.0,13.47,North,PayPal
+ORD0352,2025-09-27,C021,Desk,Furniture,350,5,0.0,1750.0,771.59,West,Bank Transfer
+ORD0353,2025-11-17,C030,Notebook,Stationery,15,5,0.0,75.0,29.55,East,PayPal
+ORD0354,2025-04-20,C097,Smartphone,Electronics,600,3,0.0,1800.0,655.78,South,PayPal
+ORD0355,2025-12-02,C028,Organizer,Stationery,30,4,0.0,120.0,45.77,East,Credit Card
+ORD0356,2025-11-06,C064,Notebook,Stationery,15,1,0.1,13.5,5.55,North,Bank Transfer
+ORD0357,2025-08-26,C097,Bookshelf,Furniture,180,5,0.1,810.0,329.02,East,Cash
+ORD0358,2025-01-25,C069,Smartphone,Electronics,600,4,0.05,2280.0,658.19,South,Cash
+ORD0359,2025-05-21,C061,Laptop,Electronics,1000,5,0.2,4000.0,941.65,East,Credit Card
+ORD0360,2025-04-27,C048,Headphones,Electronics,150,5,0.0,750.0,244.51,South,Credit Card
+ORD0361,2025-01-25,C019,Smartphone,Electronics,600,1,0.05,570.0,225.41,South,Bank Transfer
+ORD0362,2025-03-20,C004,Premium Pen,Stationery,50,1,0.2,40.0,8.86,East,Cash
+ORD0363,2025-03-09,C035,Notebook,Stationery,15,5,0.0,75.0,29.65,West,PayPal
+ORD0364,2025-06-22,C064,Laptop,Electronics,1000,2,0.15,1700.0,572.35,North,Credit Card
+ORD0365,2025-01-12,C049,Premium Pen,Stationery,50,5,0.0,250.0,101.5,West,Cash
+ORD0366,2025-10-15,C017,Bookshelf,Furniture,180,5,0.0,900.0,359.55,West,Bank Transfer
+ORD0367,2025-05-08,C044,Premium Pen,Stationery,50,3,0.0,150.0,68.98,East,PayPal
+ORD0368,2025-04-06,C092,Desk,Furniture,350,3,0.1,945.0,353.85,North,Bank Transfer
+ORD0369,2025-04-02,C030,Desk,Furniture,350,3,0.05,997.5,306.3,North,Credit Card
+ORD0370,2025-05-21,C093,Smartwatch,Electronics,250,2,0.1,450.0,108.42,West,Cash
+ORD0371,2025-01-31,C046,Organizer,Stationery,30,2,0.0,60.0,25.68,East,Cash
+ORD0372,2025-11-30,C006,Organizer,Stationery,30,5,0.0,150.0,65.79,North,Cash
+ORD0373,2025-01-20,C099,Laptop,Electronics,1000,3,0.0,3000.0,1382.88,West,Cash
+ORD0374,2025-05-26,C037,Bookshelf,Furniture,180,2,0.0,360.0,131.15,North,PayPal
+ORD0375,2025-11-12,C024,Office Chair,Furniture,200,1,0.15,170.0,57.08,East,PayPal
+ORD0376,2025-06-09,C093,Desk,Furniture,350,5,0.0,1750.0,529.29,East,Bank Transfer
+ORD0377,2025-12-15,C046,Laptop,Electronics,1000,4,0.1,3600.0,1339.45,East,PayPal
+ORD0378,2025-02-12,C053,Office Chair,Furniture,200,5,0.1,900.0,321.17,North,Credit Card
+ORD0379,2025-09-11,C095,Organizer,Stationery,30,4,0.0,120.0,45.52,South,Credit Card
+ORD0380,2025-05-10,C099,Smartwatch,Electronics,250,3,0.05,712.5,217.25,North,Cash
+ORD0381,2025-03-01,C060,Premium Pen,Stationery,50,4,0.0,200.0,81.22,South,Credit Card
+ORD0382,2025-05-31,C097,Desk,Furniture,350,3,0.0,1050.0,436.24,East,Bank Transfer
+ORD0383,2025-10-14,C063,Laptop,Electronics,1000,1,0.0,1000.0,300.87,West,PayPal
+ORD0384,2025-01-05,C085,Smartphone,Electronics,600,4,0.05,2280.0,1074.96,South,PayPal
+ORD0385,2025-09-23,C032,Office Chair,Furniture,200,5,0.0,1000.0,320.99,East,PayPal
+ORD0386,2025-12-11,C087,Premium Pen,Stationery,50,3,0.05,142.5,63.03,East,Credit Card
+ORD0387,2025-05-10,C033,Desk,Furniture,350,5,0.05,1662.5,512.43,South,PayPal
+ORD0388,2025-09-24,C067,Organizer,Stationery,30,2,0.0,60.0,22.58,West,Cash
+ORD0389,2025-06-27,C018,Bookshelf,Furniture,180,3,0.05,513.0,206.08,East,Cash
+ORD0390,2025-09-10,C025,Office Chair,Furniture,200,4,0.1,720.0,180.18,South,Cash
+ORD0391,2025-02-25,C095,Organizer,Stationery,30,3,0.0,90.0,44.77,West,Credit Card
+ORD0392,2025-03-24,C054,Desk,Furniture,350,5,0.0,1750.0,795.66,West,PayPal
+ORD0393,2025-04-09,C058,Office Chair,Furniture,200,1,0.1,180.0,57.32,East,Credit Card
+ORD0394,2025-05-29,C067,Premium Pen,Stationery,50,3,0.0,150.0,64.45,North,PayPal
+ORD0395,2025-11-25,C046,Desk,Furniture,350,4,0.05,1330.0,459.09,North,Bank Transfer
+ORD0396,2025-06-05,C024,Notebook,Stationery,15,2,0.0,30.0,14.86,East,Bank Transfer
+ORD0397,2025-07-09,C032,Laptop,Electronics,1000,1,0.0,1000.0,476.71,West,Credit Card
+ORD0398,2025-09-20,C047,Premium Pen,Stationery,50,2,0.0,100.0,47.46,East,Cash
+ORD0399,2025-03-21,C086,Office Chair,Furniture,200,3,0.0,600.0,277.29,South,Credit Card
+ORD0400,2025-09-09,C023,Bookshelf,Furniture,180,5,0.05,855.0,322.32,North,Cash
+ORD0401,2025-04-07,C066,Organizer,Stationery,30,5,0.0,150.0,52.44,South,PayPal
+ORD0402,2025-09-17,C027,Smartphone,Electronics,600,4,0.1,2160.0,525.34,East,Cash
+ORD0403,2025-09-17,C002,Organizer,Stationery,30,5,0.15,127.5,27.44,East,Cash
+ORD0404,2025-04-13,C090,Office Chair,Furniture,200,1,0.05,190.0,82.12,West,PayPal
+ORD0405,2025-02-09,C017,Organizer,Stationery,30,5,0.1,135.0,46.77,West,Bank Transfer
+ORD0406,2025-09-30,C033,Laptop,Electronics,1000,4,0.0,4000.0,1840.47,West,PayPal
+ORD0407,2025-04-11,C009,Desk,Furniture,350,3,0.0,1050.0,469.46,South,Credit Card
+ORD0408,2025-12-25,C043,Smartphone,Electronics,600,3,0.1,1620.0,538.72,West,Credit Card
+ORD0409,2025-11-04,C048,Headphones,Electronics,150,5,0.0,750.0,364.78,East,Credit Card
+ORD0410,2025-08-09,C039,Office Chair,Furniture,200,2,0.05,380.0,162.55,West,Credit Card
+ORD0411,2025-11-04,C093,Smartwatch,Electronics,250,3,0.0,750.0,234.69,North,Credit Card
+ORD0412,2025-05-04,C042,Headphones,Electronics,150,5,0.05,712.5,267.58,West,Bank Transfer
+ORD0413,2025-08-19,C026,Organizer,Stationery,30,4,0.15,102.0,31.31,South,Bank Transfer
+ORD0414,2025-06-27,C099,Office Chair,Furniture,200,5,0.15,850.0,347.09,North,Cash
+ORD0415,2025-03-04,C050,Notebook,Stationery,15,3,0.1,40.5,15.77,North,Credit Card
+ORD0416,2025-04-26,C025,Smartwatch,Electronics,250,4,0.1,900.0,226.74,North,PayPal
+ORD0417,2025-07-10,C024,Smartphone,Electronics,600,5,0.05,2850.0,1251.22,South,Credit Card
+ORD0418,2025-03-03,C013,Bookshelf,Furniture,180,1,0.05,171.0,66.06,East,Bank Transfer
+ORD0419,2025-09-13,C060,Notebook,Stationery,15,4,0.0,60.0,29.83,West,Credit Card
+ORD0420,2025-01-07,C007,Headphones,Electronics,150,1,0.0,150.0,60.65,North,Bank Transfer
+ORD0421,2025-06-04,C057,Desk,Furniture,350,2,0.0,700.0,347.06,North,Cash
+ORD0422,2025-04-02,C036,Laptop,Electronics,1000,4,0.2,3200.0,544.31,North,Cash
+ORD0423,2025-01-14,C045,Bookshelf,Furniture,180,1,0.0,180.0,60.31,East,Cash
+ORD0424,2025-08-17,C020,Notebook,Stationery,15,3,0.05,42.75,13.16,East,Bank Transfer
+ORD0425,2025-03-27,C065,Desk,Furniture,350,3,0.05,997.5,412.99,South,Credit Card
+ORD0426,2025-05-13,C008,Desk,Furniture,350,2,0.05,665.0,197.79,East,Credit Card
+ORD0427,2025-07-02,C016,Office Chair,Furniture,200,4,0.1,720.0,233.12,West,PayPal
+ORD0428,2025-03-03,C014,Notebook,Stationery,15,4,0.0,60.0,25.51,South,Bank Transfer
+ORD0429,2025-08-07,C076,Smartphone,Electronics,600,4,0.05,2280.0,779.84,South,PayPal
+ORD0430,2025-09-03,C087,Organizer,Stationery,30,2,0.1,54.0,23.85,West,Cash
+ORD0431,2025-08-18,C015,Smartwatch,Electronics,250,4,0.0,1000.0,471.41,West,Credit Card
+ORD0432,2025-03-20,C092,Smartwatch,Electronics,250,3,0.0,750.0,263.66,West,Bank Transfer
+ORD0433,2025-05-29,C098,Headphones,Electronics,150,1,0.05,142.5,60.18,South,PayPal
+ORD0434,2025-05-18,C066,Headphones,Electronics,150,3,0.1,405.0,126.18,South,PayPal
+ORD0435,2025-11-10,C032,Smartwatch,Electronics,250,3,0.0,750.0,317.23,South,PayPal
+ORD0436,2025-03-06,C087,Smartphone,Electronics,600,1,0.1,540.0,137.42,West,Credit Card
+ORD0437,2025-01-13,C063,Laptop,Electronics,1000,3,0.1,2700.0,628.55,West,Credit Card
+ORD0438,2025-08-01,C086,Premium Pen,Stationery,50,2,0.0,100.0,32.33,North,Credit Card
+ORD0439,2025-08-30,C051,Organizer,Stationery,30,1,0.2,24.0,7.38,East,Bank Transfer
+ORD0440,2025-08-01,C025,Laptop,Electronics,1000,3,0.1,2700.0,1083.5,North,Credit Card
+ORD0441,2025-06-30,C058,Office Chair,Furniture,200,5,0.1,900.0,305.11,West,Bank Transfer
+ORD0442,2025-12-04,C063,Premium Pen,Stationery,50,3,0.1,135.0,59.78,South,PayPal
+ORD0443,2025-06-22,C062,Premium Pen,Stationery,50,2,0.0,100.0,49.48,West,PayPal
+ORD0444,2025-06-09,C022,Notebook,Stationery,15,4,0.0,60.0,23.36,East,Cash
+ORD0445,2025-06-13,C058,Smartphone,Electronics,600,3,0.0,1800.0,712.64,North,Credit Card
+ORD0446,2025-07-07,C058,Smartphone,Electronics,600,4,0.0,2400.0,722.6,North,PayPal
+ORD0447,2025-07-10,C086,Premium Pen,Stationery,50,5,0.0,250.0,114.91,South,Credit Card
+ORD0448,2025-11-04,C049,Notebook,Stationery,15,3,0.15,38.25,13.43,North,Bank Transfer
+ORD0449,2025-09-13,C052,Organizer,Stationery,30,1,0.1,27.0,11.32,North,PayPal
+ORD0450,2025-07-02,C042,Premium Pen,Stationery,50,4,0.05,190.0,53.3,West,Credit Card
+ORD0451,2025-04-27,C070,Bookshelf,Furniture,180,5,0.15,765.0,174.99,North,PayPal
+ORD0452,2025-10-09,C015,Headphones,Electronics,150,1,0.1,135.0,35.33,North,PayPal
+ORD0453,2025-07-15,C054,Headphones,Electronics,150,1,0.0,150.0,47.92,North,Credit Card
+ORD0454,2025-02-03,C060,Laptop,Electronics,1000,1,0.0,1000.0,395.02,South,PayPal
+ORD0455,2025-02-21,C097,Office Chair,Furniture,200,1,0.05,190.0,71.95,South,PayPal
+ORD0456,2025-04-22,C008,Headphones,Electronics,150,3,0.1,405.0,150.26,West,PayPal
+ORD0457,2025-09-09,C053,Desk,Furniture,350,3,0.0,1050.0,401.26,North,PayPal
+ORD0458,2025-03-23,C060,Laptop,Electronics,1000,3,0.05,2850.0,1077.43,South,Bank Transfer
+ORD0459,2025-08-20,C005,Headphones,Electronics,150,5,0.0,750.0,307.27,South,PayPal
+ORD0460,2025-08-15,C068,Office Chair,Furniture,200,5,0.1,900.0,212.61,West,Cash
+ORD0461,2025-08-21,C006,Smartphone,Electronics,600,5,0.1,2700.0,609.58,East,PayPal
+ORD0462,2025-08-09,C096,Smartphone,Electronics,600,2,0.1,1080.0,288.84,North,Credit Card
+ORD0463,2025-02-11,C094,Organizer,Stationery,30,5,0.2,120.0,22.3,South,Cash
+ORD0464,2025-01-21,C047,Premium Pen,Stationery,50,3,0.1,135.0,39.58,West,Bank Transfer
+ORD0465,2025-02-11,C099,Bookshelf,Furniture,180,3,0.15,459.0,171.06,West,Cash
+ORD0466,2025-04-23,C055,Smartphone,Electronics,600,2,0.15,1020.0,405.81,West,Cash
+ORD0467,2025-04-15,C040,Notebook,Stationery,15,2,0.1,27.0,7.86,South,Cash
+ORD0468,2025-07-11,C052,Headphones,Electronics,150,5,0.05,712.5,228.18,North,Credit Card
+ORD0469,2025-01-17,C016,Notebook,Stationery,15,4,0.0,60.0,29.44,East,Credit Card
+ORD0470,2025-04-30,C013,Office Chair,Furniture,200,2,0.0,400.0,125.76,North,Credit Card
+ORD0471,2025-05-09,C030,Smartphone,Electronics,600,1,0.05,570.0,259.06,West,Bank Transfer
+ORD0472,2025-05-10,C019,Bookshelf,Furniture,180,3,0.0,540.0,239.12,West,Credit Card
+ORD0473,2025-03-01,C017,Office Chair,Furniture,200,1,0.0,200.0,73.1,East,Credit Card
+ORD0474,2025-02-17,C063,Desk,Furniture,350,3,0.2,840.0,279.33,North,Cash
+ORD0475,2025-01-29,C019,Desk,Furniture,350,3,0.15,892.5,355.86,West,Credit Card
+ORD0476,2025-04-07,C092,Notebook,Stationery,15,2,0.1,27.0,10.01,West,PayPal
+ORD0477,2025-01-10,C058,Premium Pen,Stationery,50,2,0.0,100.0,34.68,North,Credit Card
+ORD0478,2025-08-30,C055,Laptop,Electronics,1000,1,0.0,1000.0,417.26,West,Bank Transfer
+ORD0479,2025-11-10,C090,Premium Pen,Stationery,50,3,0.0,150.0,55.41,North,Bank Transfer
+ORD0480,2025-08-20,C090,Organizer,Stationery,30,1,0.0,30.0,11.52,West,PayPal
+ORD0481,2025-10-04,C062,Premium Pen,Stationery,50,4,0.0,200.0,99.11,North,Bank Transfer
+ORD0482,2025-10-11,C023,Organizer,Stationery,30,1,0.0,30.0,9.07,East,Bank Transfer
+ORD0483,2025-07-22,C009,Organizer,Stationery,30,5,0.15,127.5,51.26,West,Cash
+ORD0484,2025-09-04,C012,Bookshelf,Furniture,180,1,0.1,162.0,37.16,East,PayPal
+ORD0485,2025-10-17,C001,Smartphone,Electronics,600,5,0.0,3000.0,1170.08,West,Cash
+ORD0486,2025-09-21,C058,Bookshelf,Furniture,180,5,0.0,900.0,276.63,West,Cash
+ORD0487,2025-08-02,C001,Organizer,Stationery,30,5,0.05,142.5,64.06,South,Credit Card
+ORD0488,2025-07-19,C034,Office Chair,Furniture,200,4,0.0,800.0,321.53,North,PayPal
+ORD0489,2025-03-20,C096,Desk,Furniture,350,1,0.15,297.5,110.63,East,Credit Card
+ORD0490,2025-12-09,C048,Organizer,Stationery,30,1,0.0,30.0,14.69,East,Credit Card
+ORD0491,2025-12-10,C089,Bookshelf,Furniture,180,4,0.0,720.0,271.08,East,Cash
+ORD0492,2025-06-22,C001,Office Chair,Furniture,200,3,0.0,600.0,275.07,North,Bank Transfer
+ORD0493,2025-03-10,C016,Bookshelf,Furniture,180,2,0.0,360.0,137.69,South,PayPal
+ORD0494,2025-03-28,C061,Premium Pen,Stationery,50,1,0.05,47.5,21.38,East,Bank Transfer
+ORD0495,2025-04-11,C064,Headphones,Electronics,150,2,0.1,270.0,100.08,North,Cash
+ORD0496,2025-01-08,C063,Notebook,Stationery,15,4,0.05,57.0,17.62,West,Cash
+ORD0497,2025-11-29,C069,Laptop,Electronics,1000,3,0.0,3000.0,1237.77,East,Cash
+ORD0498,2025-07-19,C022,Bookshelf,Furniture,180,3,0.05,513.0,175.2,East,Cash
+ORD0499,2025-03-28,C093,Laptop,Electronics,1000,3,0.05,2850.0,961.53,South,Cash
+ORD0500,2025-02-12,C067,Smartwatch,Electronics,250,4,0.15,850.0,181.25,East,Cash
+ORD0501,2025-04-19,C076,Bookshelf,Furniture,180,5,0.0,900.0,391.51,East,Bank Transfer
+ORD0502,2025-06-01,C026,Headphones,Electronics,150,5,0.0,750.0,271.91,West,Credit Card
+ORD0503,2025-01-17,C016,Laptop,Electronics,1000,2,0.05,1900.0,515.35,North,Bank Transfer
+ORD0504,2025-05-13,C051,Organizer,Stationery,30,5,0.05,142.5,45.59,North,PayPal
+ORD0505,2025-05-28,C086,Bookshelf,Furniture,180,5,0.0,900.0,361.82,South,Bank Transfer
+ORD0506,2025-10-04,C057,Smartphone,Electronics,600,3,0.0,1800.0,672.94,West,Cash
+ORD0507,2025-08-20,C029,Notebook,Stationery,15,3,0.0,45.0,15.84,North,Bank Transfer
+ORD0508,2025-11-10,C078,Headphones,Electronics,150,2,0.15,255.0,68.26,West,Credit Card
+ORD0509,2025-08-16,C092,Laptop,Electronics,1000,1,0.0,1000.0,496.66,North,PayPal
+ORD0510,2025-05-19,C069,Headphones,Electronics,150,2,0.15,255.0,93.31,West,Bank Transfer
+ORD0511,2025-07-30,C047,Office Chair,Furniture,200,2,0.05,380.0,115.16,South,Credit Card
+ORD0512,2025-01-28,C094,Notebook,Stationery,15,4,0.15,51.0,17.73,East,Bank Transfer
+ORD0513,2025-02-20,C062,Organizer,Stationery,30,4,0.1,108.0,30.44,South,PayPal
+ORD0514,2025-09-18,C069,Bookshelf,Furniture,180,2,0.0,360.0,153.21,North,Bank Transfer
+ORD0515,2025-09-18,C076,Bookshelf,Furniture,180,2,0.15,306.0,88.42,South,Cash
+ORD0516,2025-12-16,C016,Bookshelf,Furniture,180,2,0.0,360.0,175.11,East,Bank Transfer
+ORD0517,2025-12-18,C090,Notebook,Stationery,15,5,0.15,63.75,23.53,South,Credit Card
+ORD0518,2025-01-08,C090,Smartphone,Electronics,600,4,0.05,2280.0,620.55,North,Bank Transfer
+ORD0519,2025-11-16,C048,Smartwatch,Electronics,250,2,0.0,500.0,160.99,North,Credit Card
+ORD0520,2025-05-18,C085,Desk,Furniture,350,3,0.05,997.5,335.52,South,PayPal
+ORD0521,2025-02-07,C039,Premium Pen,Stationery,50,3,0.2,120.0,31.21,East,Bank Transfer
+ORD0522,2025-04-21,C100,Laptop,Electronics,1000,5,0.0,5000.0,1824.24,South,PayPal
+ORD0523,2025-08-08,C033,Smartphone,Electronics,600,5,0.05,2850.0,978.83,East,PayPal
+ORD0524,2025-12-03,C094,Organizer,Stationery,30,1,0.1,27.0,8.59,West,Bank Transfer
+ORD0525,2025-08-11,C023,Laptop,Electronics,1000,1,0.1,900.0,388.16,East,Credit Card
+ORD0526,2025-05-16,C010,Bookshelf,Furniture,180,1,0.0,180.0,67.22,West,PayPal
+ORD0527,2025-09-13,C069,Headphones,Electronics,150,5,0.0,750.0,259.66,South,PayPal
+ORD0528,2025-12-26,C100,Organizer,Stationery,30,5,0.0,150.0,45.18,East,Bank Transfer
+ORD0529,2025-11-25,C034,Laptop,Electronics,1000,5,0.05,4750.0,2238.92,West,Bank Transfer
+ORD0530,2025-02-18,C052,Bookshelf,Furniture,180,3,0.0,540.0,191.14,West,Bank Transfer
+ORD0531,2025-10-19,C095,Laptop,Electronics,1000,5,0.15,4250.0,1178.21,West,Bank Transfer
+ORD0532,2025-11-20,C010,Headphones,Electronics,150,3,0.0,450.0,185.94,North,Bank Transfer
+ORD0533,2025-03-19,C019,Bookshelf,Furniture,180,1,0.05,171.0,76.41,South,Cash
+ORD0534,2025-04-15,C058,Smartwatch,Electronics,250,1,0.0,250.0,104.55,West,Bank Transfer
+ORD0535,2025-06-18,C096,Smartphone,Electronics,600,1,0.0,600.0,257.47,East,Credit Card
+ORD0536,2025-08-05,C001,Office Chair,Furniture,200,2,0.0,400.0,175.77,West,PayPal
+ORD0537,2025-04-29,C069,Premium Pen,Stationery,50,2,0.0,100.0,35.38,North,Credit Card
+ORD0538,2025-07-09,C004,Notebook,Stationery,15,4,0.05,57.0,18.59,South,Credit Card
+ORD0539,2025-09-12,C016,Premium Pen,Stationery,50,4,0.15,170.0,46.44,North,Cash
+ORD0540,2025-09-23,C024,Organizer,Stationery,30,4,0.05,114.0,31.47,North,Bank Transfer
+ORD0541,2025-05-29,C080,Premium Pen,Stationery,50,2,0.2,80.0,23.0,North,PayPal
+ORD0542,2025-06-13,C002,Bookshelf,Furniture,180,2,0.15,306.0,108.45,East,Credit Card
+ORD0543,2025-05-20,C092,Smartwatch,Electronics,250,4,0.05,950.0,318.82,South,Bank Transfer
+ORD0544,2025-12-13,C032,Office Chair,Furniture,200,4,0.1,720.0,288.19,South,Bank Transfer
+ORD0545,2025-09-15,C091,Smartphone,Electronics,600,5,0.05,2850.0,1160.99,East,Cash
+ORD0546,2025-09-26,C084,Smartphone,Electronics,600,4,0.0,2400.0,1092.19,South,Cash
+ORD0547,2025-06-30,C024,Headphones,Electronics,150,5,0.1,675.0,289.63,North,Cash
+ORD0548,2025-06-09,C012,Notebook,Stationery,15,3,0.0,45.0,15.05,South,PayPal
+ORD0549,2025-12-17,C050,Laptop,Electronics,1000,2,0.05,1900.0,798.18,East,Credit Card
+ORD0550,2025-10-15,C035,Smartwatch,Electronics,250,4,0.1,900.0,305.39,North,Cash
+ORD0551,2025-10-15,C033,Laptop,Electronics,1000,2,0.0,2000.0,982.67,East,Cash
+ORD0552,2025-08-14,C033,Office Chair,Furniture,200,2,0.0,400.0,144.05,West,Cash
+ORD0553,2025-01-11,C061,Premium Pen,Stationery,50,2,0.15,85.0,28.39,North,Credit Card
+ORD0554,2025-01-10,C051,Smartphone,Electronics,600,3,0.05,1710.0,541.89,North,Credit Card
+ORD0555,2025-09-28,C043,Office Chair,Furniture,200,1,0.0,200.0,83.5,South,Cash
+ORD0556,2025-09-30,C012,Premium Pen,Stationery,50,4,0.05,190.0,82.17,North,Cash
+ORD0557,2025-07-02,C067,Smartphone,Electronics,600,1,0.05,570.0,208.42,East,Bank Transfer
+ORD0558,2025-06-02,C065,Premium Pen,Stationery,50,1,0.05,47.5,21.19,South,Cash
+ORD0559,2025-11-11,C033,Notebook,Stationery,15,1,0.2,12.0,3.18,West,PayPal
+ORD0560,2025-11-30,C040,Smartwatch,Electronics,250,2,0.05,475.0,193.27,East,PayPal
+ORD0561,2025-05-04,C074,Organizer,Stationery,30,5,0.0,150.0,47.64,West,Cash
+ORD0562,2025-04-24,C043,Office Chair,Furniture,200,2,0.1,360.0,155.13,West,Credit Card
+ORD0563,2025-10-05,C044,Office Chair,Furniture,200,2,0.15,340.0,84.48,West,Bank Transfer
+ORD0564,2025-08-01,C029,Desk,Furniture,350,1,0.0,350.0,162.21,North,Credit Card
+ORD0565,2025-06-21,C013,Bookshelf,Furniture,180,2,0.0,360.0,157.03,East,Cash
+ORD0566,2025-10-15,C012,Notebook,Stationery,15,1,0.0,15.0,6.25,East,PayPal
+ORD0567,2025-06-23,C095,Notebook,Stationery,15,5,0.05,71.25,20.13,North,Bank Transfer
+ORD0568,2025-04-23,C046,Laptop,Electronics,1000,4,0.05,3800.0,1605.94,South,Credit Card
+ORD0569,2025-05-02,C002,Premium Pen,Stationery,50,1,0.05,47.5,21.59,West,Credit Card
+ORD0570,2025-02-01,C035,Bookshelf,Furniture,180,5,0.15,765.0,257.64,East,Cash
+ORD0571,2025-08-10,C087,Smartwatch,Electronics,250,4,0.1,900.0,379.06,North,Bank Transfer
+ORD0572,2025-04-29,C081,Smartwatch,Electronics,250,3,0.0,750.0,355.71,West,PayPal
+ORD0573,2025-02-08,C090,Notebook,Stationery,15,1,0.0,15.0,5.78,South,Cash
+ORD0574,2025-09-25,C008,Smartwatch,Electronics,250,1,0.0,250.0,121.95,South,Bank Transfer
+ORD0575,2025-08-21,C093,Desk,Furniture,350,3,0.0,1050.0,518.5,West,Credit Card
+ORD0576,2025-01-18,C026,Office Chair,Furniture,200,3,0.05,570.0,184.27,South,Cash
+ORD0577,2025-05-29,C074,Headphones,Electronics,150,1,0.15,127.5,41.65,East,Credit Card
+ORD0578,2025-05-29,C090,Organizer,Stationery,30,3,0.0,90.0,42.74,East,Credit Card
+ORD0579,2025-05-06,C034,Laptop,Electronics,1000,2,0.05,1900.0,798.55,East,Cash
+ORD0580,2025-10-29,C007,Premium Pen,Stationery,50,4,0.1,180.0,54.32,South,Cash
+ORD0581,2025-12-26,C068,Organizer,Stationery,30,4,0.0,120.0,53.39,East,Cash
+ORD0582,2025-08-26,C058,Premium Pen,Stationery,50,4,0.0,200.0,80.22,North,Cash
+ORD0583,2025-05-15,C075,Smartphone,Electronics,600,2,0.0,1200.0,570.79,East,Cash
+ORD0584,2025-05-31,C029,Organizer,Stationery,30,3,0.0,90.0,34.41,East,Credit Card
+ORD0585,2025-08-24,C036,Headphones,Electronics,150,5,0.15,637.5,215.09,South,PayPal
+ORD0586,2025-08-12,C089,Notebook,Stationery,15,3,0.0,45.0,16.86,East,PayPal
+ORD0587,2025-07-22,C021,Desk,Furniture,350,1,0.0,350.0,118.41,West,Cash
+ORD0588,2025-09-13,C036,Office Chair,Furniture,200,4,0.05,760.0,262.14,North,Credit Card
+ORD0589,2025-03-27,C010,Office Chair,Furniture,200,3,0.2,480.0,144.51,South,PayPal
+ORD0590,2025-05-30,C073,Desk,Furniture,350,5,0.0,1750.0,785.49,North,PayPal
+ORD0591,2025-08-23,C024,Bookshelf,Furniture,180,1,0.0,180.0,78.21,West,PayPal
+ORD0592,2025-12-11,C064,Smartphone,Electronics,600,2,0.0,1200.0,560.49,South,Credit Card
+ORD0593,2025-01-22,C099,Premium Pen,Stationery,50,2,0.0,100.0,46.38,South,Cash
+ORD0594,2025-12-14,C049,Headphones,Electronics,150,5,0.0,750.0,256.4,East,Cash
+ORD0595,2025-10-12,C099,Smartwatch,Electronics,250,1,0.05,237.5,93.26,North,Cash
+ORD0596,2025-09-26,C036,Organizer,Stationery,30,4,0.0,120.0,49.54,West,Bank Transfer
+ORD0597,2025-09-15,C082,Smartphone,Electronics,600,3,0.0,1800.0,686.14,West,Bank Transfer
+ORD0598,2025-01-29,C096,Organizer,Stationery,30,1,0.1,27.0,8.46,South,Bank Transfer
+ORD0599,2025-08-01,C024,Headphones,Electronics,150,2,0.0,300.0,145.96,East,Credit Card
+ORD0600,2025-10-10,C023,Laptop,Electronics,1000,5,0.0,5000.0,1668.46,South,PayPal
+ORD0601,2025-02-19,C062,Laptop,Electronics,1000,5,0.0,5000.0,2322.67,South,PayPal
+ORD0602,2025-04-05,C096,Smartphone,Electronics,600,3,0.2,1440.0,279.69,South,Credit Card
+ORD0603,2025-03-29,C037,Notebook,Stationery,15,5,0.0,75.0,25.91,South,Credit Card
+ORD0604,2025-02-13,C012,Headphones,Electronics,150,5,0.15,637.5,155.27,West,Cash
+ORD0605,2025-10-05,C055,Headphones,Electronics,150,1,0.1,135.0,42.63,West,Cash
+ORD0606,2025-06-20,C013,Desk,Furniture,350,4,0.0,1400.0,695.91,South,Bank Transfer
+ORD0607,2025-07-08,C023,Notebook,Stationery,15,3,0.2,36.0,10.26,South,Bank Transfer
+ORD0608,2025-12-19,C089,Premium Pen,Stationery,50,1,0.0,50.0,18.95,East,Credit Card
+ORD0609,2025-07-03,C099,Premium Pen,Stationery,50,4,0.0,200.0,84.5,South,Bank Transfer
+ORD0610,2025-01-03,C030,Smartwatch,Electronics,250,1,0.1,225.0,56.83,West,PayPal
+ORD0611,2025-07-10,C017,Office Chair,Furniture,200,1,0.1,180.0,67.65,North,Credit Card
+ORD0612,2025-04-28,C062,Laptop,Electronics,1000,5,0.05,4750.0,1956.47,West,Credit Card
+ORD0613,2025-01-19,C084,Premium Pen,Stationery,50,4,0.0,200.0,89.36,East,PayPal
+ORD0614,2025-01-23,C089,Notebook,Stationery,15,3,0.0,45.0,19.5,West,Cash
+ORD0615,2025-01-30,C086,Headphones,Electronics,150,3,0.1,405.0,129.83,North,Cash
+ORD0616,2025-10-22,C013,Premium Pen,Stationery,50,4,0.0,200.0,71.72,South,PayPal
+ORD0617,2025-04-18,C059,Headphones,Electronics,150,5,0.0,750.0,275.61,North,PayPal
+ORD0618,2025-10-08,C019,Premium Pen,Stationery,50,2,0.0,100.0,33.85,South,Bank Transfer
+ORD0619,2025-05-08,C049,Laptop,Electronics,1000,1,0.0,1000.0,322.82,South,Credit Card
+ORD0620,2025-08-17,C100,Organizer,Stationery,30,5,0.15,127.5,28.02,West,Bank Transfer
+ORD0621,2025-04-21,C012,Premium Pen,Stationery,50,4,0.0,200.0,99.24,West,PayPal
+ORD0622,2025-05-16,C061,Notebook,Stationery,15,1,0.2,12.0,2.29,West,Bank Transfer
+ORD0623,2025-12-28,C019,Premium Pen,Stationery,50,3,0.0,150.0,68.75,East,PayPal
+ORD0624,2025-07-05,C076,Office Chair,Furniture,200,2,0.1,360.0,149.37,West,Bank Transfer
+ORD0625,2025-05-24,C009,Laptop,Electronics,1000,3,0.0,3000.0,1116.91,East,Bank Transfer
+ORD0626,2025-03-13,C071,Notebook,Stationery,15,4,0.0,60.0,26.16,West,Cash
+ORD0627,2025-05-09,C028,Desk,Furniture,350,1,0.0,350.0,171.0,South,PayPal
+ORD0628,2025-12-30,C078,Notebook,Stationery,15,4,0.0,60.0,28.35,East,Bank Transfer
+ORD0629,2025-09-18,C095,Office Chair,Furniture,200,1,0.05,190.0,89.96,North,Credit Card
+ORD0630,2025-01-03,C052,Organizer,Stationery,30,5,0.2,120.0,17.9,East,Bank Transfer
+ORD0631,2025-04-14,C083,Laptop,Electronics,1000,2,0.05,1900.0,890.15,East,Bank Transfer
+ORD0632,2025-08-12,C016,Desk,Furniture,350,5,0.0,1750.0,801.69,North,Credit Card
+ORD0633,2025-11-16,C069,Office Chair,Furniture,200,5,0.0,1000.0,416.75,East,PayPal
+ORD0634,2025-12-28,C099,Office Chair,Furniture,200,4,0.0,800.0,342.95,South,Cash
+ORD0635,2025-12-20,C012,Smartphone,Electronics,600,2,0.05,1140.0,321.19,West,Cash
+ORD0636,2025-01-10,C025,Laptop,Electronics,1000,1,0.1,900.0,391.94,North,Cash
+ORD0637,2025-10-29,C052,Notebook,Stationery,15,1,0.15,12.75,3.71,West,Credit Card
+ORD0638,2025-08-19,C085,Headphones,Electronics,150,3,0.0,450.0,163.76,South,Bank Transfer
+ORD0639,2025-08-07,C100,Organizer,Stationery,30,1,0.05,28.5,7.91,North,PayPal
+ORD0640,2025-03-07,C053,Headphones,Electronics,150,4,0.0,600.0,225.56,West,Bank Transfer
+ORD0641,2025-04-22,C023,Notebook,Stationery,15,5,0.05,71.25,21.69,West,Cash
+ORD0642,2025-01-13,C016,Notebook,Stationery,15,5,0.05,71.25,32.49,South,Bank Transfer
+ORD0643,2025-03-27,C057,Laptop,Electronics,1000,5,0.05,4750.0,1864.06,West,Credit Card
+ORD0644,2025-08-22,C039,Notebook,Stationery,15,2,0.05,28.5,11.26,South,Credit Card
+ORD0645,2025-03-31,C053,Smartphone,Electronics,600,1,0.0,600.0,193.65,East,PayPal
+ORD0646,2025-11-10,C042,Desk,Furniture,350,4,0.1,1260.0,517.62,South,PayPal
+ORD0647,2025-02-23,C058,Notebook,Stationery,15,2,0.0,30.0,14.09,East,Cash
+ORD0648,2025-01-12,C039,Headphones,Electronics,150,3,0.05,427.5,172.93,North,PayPal
+ORD0649,2025-07-28,C014,Notebook,Stationery,15,4,0.0,60.0,29.35,West,Bank Transfer
+ORD0650,2025-01-14,C095,Smartphone,Electronics,600,4,0.05,2280.0,992.42,South,Credit Card
+ORD0651,2025-05-01,C005,Premium Pen,Stationery,50,4,0.15,170.0,31.39,South,Credit Card
+ORD0652,2025-01-20,C035,Premium Pen,Stationery,50,5,0.15,212.5,66.09,West,Credit Card
+ORD0653,2025-03-16,C087,Office Chair,Furniture,200,4,0.1,720.0,218.88,West,PayPal
+ORD0654,2025-08-31,C093,Organizer,Stationery,30,1,0.05,28.5,9.14,North,Credit Card
+ORD0655,2025-08-11,C075,Smartwatch,Electronics,250,4,0.1,900.0,326.61,North,Credit Card
+ORD0656,2025-03-11,C018,Desk,Furniture,350,5,0.05,1662.5,735.97,South,Credit Card
+ORD0657,2025-11-08,C076,Bookshelf,Furniture,180,4,0.15,612.0,222.25,North,Cash
+ORD0658,2025-07-30,C009,Office Chair,Furniture,200,3,0.0,600.0,262.41,East,Cash
+ORD0659,2025-04-11,C074,Organizer,Stationery,30,3,0.2,72.0,15.55,North,PayPal
+ORD0660,2025-07-05,C058,Premium Pen,Stationery,50,5,0.15,212.5,67.59,North,Credit Card
+ORD0661,2025-05-12,C017,Headphones,Electronics,150,1,0.1,135.0,59.8,South,PayPal
+ORD0662,2025-04-21,C007,Bookshelf,Furniture,180,1,0.0,180.0,71.16,East,Credit Card
+ORD0663,2025-05-12,C046,Organizer,Stationery,30,2,0.0,60.0,18.94,North,Credit Card
+ORD0664,2025-01-20,C013,Organizer,Stationery,30,5,0.15,127.5,28.14,East,Credit Card
+ORD0665,2025-01-24,C040,Office Chair,Furniture,200,4,0.0,800.0,267.97,East,PayPal
+ORD0666,2025-08-15,C042,Bookshelf,Furniture,180,5,0.15,765.0,171.89,East,PayPal
+ORD0667,2025-06-03,C009,Laptop,Electronics,1000,2,0.0,2000.0,870.51,West,Credit Card
+ORD0668,2025-10-20,C050,Smartwatch,Electronics,250,5,0.0,1250.0,433.7,West,Bank Transfer
+ORD0669,2025-08-18,C027,Laptop,Electronics,1000,5,0.15,4250.0,1606.84,West,PayPal
+ORD0670,2025-11-06,C066,Bookshelf,Furniture,180,2,0.05,342.0,114.64,West,Cash
+ORD0671,2025-12-25,C005,Laptop,Electronics,1000,1,0.05,950.0,321.69,South,PayPal
+ORD0672,2025-07-21,C029,Smartphone,Electronics,600,4,0.05,2280.0,1067.73,North,Credit Card
+ORD0673,2025-02-07,C037,Premium Pen,Stationery,50,2,0.0,100.0,34.24,West,Bank Transfer
+ORD0674,2025-09-17,C038,Smartphone,Electronics,600,3,0.1,1620.0,394.83,South,Credit Card
+ORD0675,2025-07-07,C083,Notebook,Stationery,15,1,0.0,15.0,6.7,North,Cash
+ORD0676,2025-02-26,C008,Laptop,Electronics,1000,3,0.15,2550.0,562.57,West,PayPal
+ORD0677,2025-01-20,C065,Notebook,Stationery,15,1,0.15,12.75,5.0,North,PayPal
+ORD0678,2025-09-30,C086,Headphones,Electronics,150,4,0.0,600.0,228.0,West,Credit Card
+ORD0679,2025-04-29,C017,Desk,Furniture,350,4,0.1,1260.0,424.02,South,Credit Card
+ORD0680,2025-03-12,C071,Headphones,Electronics,150,5,0.05,712.5,255.61,East,Cash
+ORD0681,2025-01-04,C089,Bookshelf,Furniture,180,3,0.0,540.0,169.97,East,Bank Transfer
+ORD0682,2025-08-09,C045,Organizer,Stationery,30,1,0.2,24.0,3.77,North,Cash
+ORD0683,2025-01-14,C004,Premium Pen,Stationery,50,4,0.0,200.0,68.6,South,Bank Transfer
+ORD0684,2025-01-03,C036,Laptop,Electronics,1000,2,0.0,2000.0,890.52,East,PayPal
+ORD0685,2025-08-04,C070,Office Chair,Furniture,200,4,0.05,760.0,214.11,West,Bank Transfer
+ORD0686,2025-08-17,C031,Desk,Furniture,350,2,0.05,665.0,301.35,East,Bank Transfer
+ORD0687,2025-12-02,C019,Smartwatch,Electronics,250,1,0.05,237.5,69.83,North,PayPal
+ORD0688,2025-07-05,C061,Smartwatch,Electronics,250,4,0.1,900.0,334.37,North,PayPal
+ORD0689,2025-02-24,C054,Smartwatch,Electronics,250,4,0.05,950.0,439.25,South,PayPal
+ORD0690,2025-09-11,C039,Laptop,Electronics,1000,1,0.05,950.0,316.13,North,Cash
+ORD0691,2025-01-24,C091,Smartwatch,Electronics,250,4,0.0,1000.0,453.74,East,PayPal
+ORD0692,2025-06-11,C074,Smartphone,Electronics,600,2,0.0,1200.0,541.54,East,Credit Card
+ORD0693,2025-06-07,C090,Desk,Furniture,350,4,0.0,1400.0,614.31,East,PayPal
+ORD0694,2025-03-23,C019,Smartphone,Electronics,600,3,0.0,1800.0,877.07,East,PayPal
+ORD0695,2025-06-08,C039,Organizer,Stationery,30,5,0.05,142.5,62.19,South,PayPal
+ORD0696,2025-07-07,C067,Desk,Furniture,350,2,0.0,700.0,349.28,West,Bank Transfer
+ORD0697,2025-03-01,C045,Smartphone,Electronics,600,3,0.0,1800.0,739.65,West,Cash
+ORD0698,2025-11-01,C013,Desk,Furniture,350,1,0.0,350.0,169.1,South,PayPal
+ORD0699,2025-11-15,C092,Organizer,Stationery,30,2,0.15,51.0,12.81,North,Cash
+ORD0700,2025-07-30,C058,Notebook,Stationery,15,5,0.15,63.75,22.72,West,Credit Card
+ORD0701,2025-06-01,C020,Laptop,Electronics,1000,5,0.05,4750.0,1306.43,North,Credit Card
+ORD0702,2025-04-19,C092,Laptop,Electronics,1000,1,0.15,850.0,175.75,West,PayPal
+ORD0703,2025-03-17,C072,Smartwatch,Electronics,250,1,0.1,225.0,85.53,North,Credit Card
+ORD0704,2025-01-30,C061,Headphones,Electronics,150,2,0.05,285.0,88.01,South,Cash
+ORD0705,2025-11-10,C039,Smartwatch,Electronics,250,4,0.0,1000.0,339.35,East,Bank Transfer
+ORD0706,2025-04-27,C001,Bookshelf,Furniture,180,1,0.1,162.0,36.48,North,PayPal
+ORD0707,2025-12-22,C003,Smartphone,Electronics,600,4,0.1,2160.0,673.04,East,Credit Card
+ORD0708,2025-07-11,C077,Desk,Furniture,350,3,0.05,997.5,455.29,North,Cash
+ORD0709,2025-01-19,C092,Headphones,Electronics,150,5,0.1,675.0,202.97,North,Cash
+ORD0710,2025-06-22,C062,Organizer,Stationery,30,4,0.05,114.0,39.0,North,Credit Card
+ORD0711,2025-08-16,C063,Bookshelf,Furniture,180,5,0.1,810.0,245.1,North,Cash
+ORD0712,2025-12-16,C025,Organizer,Stationery,30,4,0.15,102.0,34.63,North,Cash
+ORD0713,2025-07-02,C056,Laptop,Electronics,1000,3,0.0,3000.0,984.19,East,PayPal
+ORD0714,2025-04-23,C033,Laptop,Electronics,1000,1,0.1,900.0,208.11,North,Cash
+ORD0715,2025-07-02,C038,Smartwatch,Electronics,250,3,0.0,750.0,342.34,East,Credit Card
+ORD0716,2025-05-26,C006,Smartphone,Electronics,600,1,0.05,570.0,259.42,South,PayPal
+ORD0717,2025-11-15,C058,Headphones,Electronics,150,1,0.1,135.0,54.16,West,Credit Card
+ORD0718,2025-04-26,C044,Premium Pen,Stationery,50,5,0.0,250.0,83.97,North,Bank Transfer
+ORD0719,2025-04-23,C045,Bookshelf,Furniture,180,3,0.05,513.0,169.92,West,Credit Card
+ORD0720,2025-09-08,C032,Bookshelf,Furniture,180,4,0.0,720.0,268.41,East,Credit Card
+ORD0721,2025-09-08,C045,Smartwatch,Electronics,250,3,0.05,712.5,277.23,South,PayPal
+ORD0722,2025-10-30,C061,Laptop,Electronics,1000,5,0.0,5000.0,1922.17,South,Cash
+ORD0723,2025-11-09,C047,Smartwatch,Electronics,250,1,0.1,225.0,84.61,South,Credit Card
+ORD0724,2025-04-28,C021,Desk,Furniture,350,5,0.0,1750.0,707.98,West,PayPal
+ORD0725,2025-10-28,C080,Headphones,Electronics,150,2,0.05,285.0,87.42,East,Bank Transfer
+ORD0726,2025-06-10,C085,Smartphone,Electronics,600,2,0.0,1200.0,364.5,North,PayPal
+ORD0727,2025-07-17,C075,Notebook,Stationery,15,4,0.15,51.0,9.81,North,PayPal
+ORD0728,2025-09-17,C036,Office Chair,Furniture,200,5,0.15,850.0,163.23,East,Cash
+ORD0729,2025-05-28,C099,Office Chair,Furniture,200,4,0.2,640.0,175.64,West,Credit Card
+ORD0730,2025-08-28,C019,Smartwatch,Electronics,250,4,0.1,900.0,306.24,North,Bank Transfer
+ORD0731,2025-02-16,C020,Desk,Furniture,350,2,0.1,630.0,181.21,East,PayPal
+ORD0732,2025-07-17,C057,Headphones,Electronics,150,4,0.0,600.0,189.34,North,Credit Card
+ORD0733,2025-02-16,C018,Premium Pen,Stationery,50,2,0.0,100.0,47.16,South,Credit Card
+ORD0734,2025-03-19,C047,Office Chair,Furniture,200,1,0.0,200.0,87.83,North,PayPal
+ORD0735,2025-05-04,C049,Headphones,Electronics,150,5,0.1,675.0,279.11,West,Credit Card
+ORD0736,2025-03-16,C014,Smartphone,Electronics,600,4,0.15,2040.0,546.24,East,PayPal
+ORD0737,2025-12-25,C015,Organizer,Stationery,30,2,0.0,60.0,26.32,West,PayPal
+ORD0738,2025-05-17,C031,Desk,Furniture,350,3,0.15,892.5,299.02,East,PayPal
+ORD0739,2025-03-31,C001,Laptop,Electronics,1000,4,0.05,3800.0,1743.27,South,Bank Transfer
+ORD0740,2025-11-21,C054,Headphones,Electronics,150,1,0.05,142.5,57.01,East,PayPal
+ORD0741,2025-03-02,C003,Smartphone,Electronics,600,1,0.0,600.0,196.5,North,Cash
+ORD0742,2025-05-18,C016,Premium Pen,Stationery,50,3,0.0,150.0,68.01,North,Credit Card
+ORD0743,2025-02-19,C087,Notebook,Stationery,15,2,0.05,28.5,9.33,South,Bank Transfer
+ORD0744,2025-09-16,C057,Laptop,Electronics,1000,4,0.05,3800.0,1296.3,East,Credit Card
+ORD0745,2025-04-17,C075,Notebook,Stationery,15,2,0.0,30.0,9.82,South,Bank Transfer
+ORD0746,2025-04-23,C012,Premium Pen,Stationery,50,1,0.05,47.5,21.18,North,Cash
+ORD0747,2025-12-16,C074,Smartphone,Electronics,600,2,0.15,1020.0,185.38,West,Bank Transfer
+ORD0748,2025-09-11,C096,Office Chair,Furniture,200,1,0.1,180.0,56.69,South,Bank Transfer
+ORD0749,2025-04-28,C016,Notebook,Stationery,15,2,0.15,25.5,4.53,West,Bank Transfer
+ORD0750,2025-07-17,C072,Laptop,Electronics,1000,3,0.0,3000.0,953.09,West,Credit Card
+ORD0751,2025-12-03,C076,Smartwatch,Electronics,250,5,0.0,1250.0,569.62,East,PayPal
+ORD0752,2025-12-31,C024,Bookshelf,Furniture,180,3,0.1,486.0,209.93,South,Credit Card
+ORD0753,2025-02-20,C028,Headphones,Electronics,150,3,0.0,450.0,201.99,West,PayPal
+ORD0754,2025-09-02,C008,Office Chair,Furniture,200,5,0.0,1000.0,394.49,West,Credit Card
+ORD0755,2025-02-04,C092,Notebook,Stationery,15,5,0.0,75.0,34.93,East,Cash
+ORD0756,2025-10-29,C036,Organizer,Stationery,30,4,0.0,120.0,55.98,East,Cash
+ORD0757,2025-03-10,C090,Headphones,Electronics,150,4,0.0,600.0,244.49,North,Bank Transfer
+ORD0758,2025-12-15,C008,Smartwatch,Electronics,250,3,0.0,750.0,370.01,West,Cash
+ORD0759,2025-11-16,C058,Premium Pen,Stationery,50,3,0.0,150.0,71.34,North,Bank Transfer
+ORD0760,2025-02-18,C060,Bookshelf,Furniture,180,1,0.0,180.0,75.03,West,PayPal
+ORD0761,2025-03-15,C050,Smartphone,Electronics,600,1,0.05,570.0,262.42,North,Cash
+ORD0762,2025-07-11,C028,Smartwatch,Electronics,250,4,0.05,950.0,370.65,East,PayPal
+ORD0763,2025-09-18,C092,Smartwatch,Electronics,250,4,0.05,950.0,355.2,South,Credit Card
+ORD0764,2025-12-22,C041,Premium Pen,Stationery,50,1,0.0,50.0,20.49,East,PayPal
+ORD0765,2025-03-11,C100,Desk,Furniture,350,1,0.0,350.0,114.16,North,Credit Card
+ORD0766,2025-03-31,C064,Premium Pen,Stationery,50,2,0.05,95.0,34.4,North,PayPal
+ORD0767,2025-09-17,C027,Desk,Furniture,350,2,0.05,665.0,249.48,South,PayPal
+ORD0768,2025-05-06,C063,Desk,Furniture,350,1,0.05,332.5,128.75,West,Cash
+ORD0769,2025-08-19,C017,Office Chair,Furniture,200,2,0.0,400.0,134.59,North,PayPal
+ORD0770,2025-10-22,C073,Office Chair,Furniture,200,5,0.15,850.0,170.99,North,Cash
+ORD0771,2025-05-09,C033,Laptop,Electronics,1000,4,0.0,4000.0,1317.41,North,Cash
+ORD0772,2025-10-07,C084,Notebook,Stationery,15,4,0.0,60.0,21.92,South,Bank Transfer
+ORD0773,2025-11-09,C077,Notebook,Stationery,15,1,0.05,14.25,6.34,East,Bank Transfer
+ORD0774,2025-04-10,C092,Smartphone,Electronics,600,3,0.05,1710.0,710.33,North,Credit Card
+ORD0775,2025-11-22,C029,Notebook,Stationery,15,1,0.0,15.0,7.36,South,PayPal
+ORD0776,2025-10-24,C013,Office Chair,Furniture,200,2,0.0,400.0,125.53,North,Credit Card
+ORD0777,2025-07-01,C046,Laptop,Electronics,1000,3,0.1,2700.0,803.52,West,PayPal
+ORD0778,2025-06-23,C035,Laptop,Electronics,1000,2,0.0,2000.0,701.45,South,Bank Transfer
+ORD0779,2025-11-12,C006,Desk,Furniture,350,5,0.0,1750.0,765.95,North,Bank Transfer
+ORD0780,2025-12-30,C082,Premium Pen,Stationery,50,2,0.0,100.0,33.09,South,PayPal
+ORD0781,2025-07-07,C069,Smartphone,Electronics,600,5,0.1,2700.0,1044.24,North,PayPal
+ORD0782,2025-02-26,C047,Desk,Furniture,350,5,0.0,1750.0,874.42,East,Bank Transfer
+ORD0783,2025-01-31,C025,Premium Pen,Stationery,50,2,0.2,80.0,22.47,North,Bank Transfer
+ORD0784,2025-03-25,C066,Notebook,Stationery,15,2,0.05,28.5,10.08,South,Credit Card
+ORD0785,2025-06-01,C010,Desk,Furniture,350,5,0.2,1400.0,357.45,West,Bank Transfer
+ORD0786,2025-02-05,C056,Headphones,Electronics,150,3,0.15,382.5,79.91,West,PayPal
+ORD0787,2025-08-01,C030,Notebook,Stationery,15,5,0.0,75.0,35.92,West,Credit Card
+ORD0788,2025-12-30,C005,Premium Pen,Stationery,50,4,0.0,200.0,77.85,North,PayPal
+ORD0789,2025-04-16,C033,Smartphone,Electronics,600,5,0.0,3000.0,1192.21,East,Cash
+ORD0790,2025-12-08,C065,Premium Pen,Stationery,50,3,0.0,150.0,66.56,North,Credit Card
+ORD0791,2025-08-08,C018,Desk,Furniture,350,4,0.1,1260.0,329.78,West,PayPal
+ORD0792,2025-06-12,C096,Desk,Furniture,350,1,0.0,350.0,122.3,South,Bank Transfer
+ORD0793,2025-08-08,C049,Smartwatch,Electronics,250,1,0.0,250.0,88.36,West,Cash
+ORD0794,2025-09-27,C011,Smartphone,Electronics,600,3,0.0,1800.0,584.57,South,PayPal
+ORD0795,2025-04-30,C085,Organizer,Stationery,30,5,0.15,127.5,30.82,East,Credit Card
+ORD0796,2025-12-02,C026,Notebook,Stationery,15,2,0.0,30.0,13.61,South,PayPal
+ORD0797,2025-07-01,C063,Laptop,Electronics,1000,3,0.0,3000.0,1076.66,North,Cash
+ORD0798,2025-04-16,C089,Smartphone,Electronics,600,4,0.0,2400.0,1052.3,North,Credit Card
+ORD0799,2025-08-05,C086,Laptop,Electronics,1000,4,0.15,3400.0,1206.26,North,Cash
+ORD0800,2025-07-24,C059,Smartphone,Electronics,600,1,0.05,570.0,261.24,South,PayPal
+ORD0801,2025-03-11,C027,Smartphone,Electronics,600,4,0.0,2400.0,842.87,North,Bank Transfer
+ORD0802,2025-02-13,C049,Premium Pen,Stationery,50,3,0.0,150.0,53.67,North,Bank Transfer
+ORD0803,2025-11-25,C077,Smartphone,Electronics,600,4,0.0,2400.0,1087.44,North,PayPal
+ORD0804,2025-10-28,C033,Smartwatch,Electronics,250,3,0.0,750.0,262.59,East,PayPal
+ORD0805,2025-08-16,C098,Organizer,Stationery,30,2,0.15,51.0,9.99,South,PayPal
+ORD0806,2025-07-03,C099,Desk,Furniture,350,1,0.1,315.0,132.44,South,Credit Card
+ORD0807,2025-04-17,C001,Bookshelf,Furniture,180,4,0.0,720.0,326.5,West,Cash
+ORD0808,2025-03-25,C021,Laptop,Electronics,1000,3,0.15,2550.0,599.84,South,Cash
+ORD0809,2025-12-04,C055,Desk,Furniture,350,5,0.0,1750.0,778.92,East,Cash
+ORD0810,2025-09-07,C006,Bookshelf,Furniture,180,1,0.1,162.0,49.51,South,PayPal
+ORD0811,2025-12-29,C092,Organizer,Stationery,30,2,0.15,51.0,20.03,East,Cash
+ORD0812,2025-01-21,C081,Organizer,Stationery,30,3,0.0,90.0,36.86,East,PayPal
+ORD0813,2025-07-15,C069,Laptop,Electronics,1000,2,0.1,1800.0,504.36,South,Credit Card
+ORD0814,2025-06-27,C095,Laptop,Electronics,1000,2,0.0,2000.0,725.39,West,Bank Transfer
+ORD0815,2025-01-07,C005,Organizer,Stationery,30,4,0.0,120.0,40.44,North,PayPal
+ORD0816,2025-03-11,C003,Bookshelf,Furniture,180,4,0.0,720.0,233.65,North,PayPal
+ORD0817,2025-05-07,C053,Smartphone,Electronics,600,3,0.0,1800.0,621.65,South,Bank Transfer
+ORD0818,2025-06-09,C023,Notebook,Stationery,15,5,0.1,67.5,19.93,South,Bank Transfer
+ORD0819,2025-09-05,C053,Headphones,Electronics,150,3,0.15,382.5,154.64,East,Credit Card
+ORD0820,2025-07-22,C037,Desk,Furniture,350,5,0.05,1662.5,600.26,South,Cash
+ORD0821,2025-05-28,C074,Premium Pen,Stationery,50,2,0.15,85.0,34.25,East,PayPal
+ORD0822,2025-05-23,C074,Desk,Furniture,350,1,0.1,315.0,83.44,West,Cash
+ORD0823,2025-07-18,C083,Premium Pen,Stationery,50,3,0.0,150.0,65.38,South,PayPal
+ORD0824,2025-06-03,C017,Bookshelf,Furniture,180,3,0.0,540.0,209.26,North,Credit Card
+ORD0825,2025-05-22,C085,Premium Pen,Stationery,50,5,0.0,250.0,111.03,North,Bank Transfer
+ORD0826,2025-11-09,C078,Laptop,Electronics,1000,2,0.05,1900.0,587.0,South,Credit Card
+ORD0827,2025-06-14,C073,Notebook,Stationery,15,2,0.15,25.5,5.18,East,Bank Transfer
+ORD0828,2025-11-10,C001,Notebook,Stationery,15,5,0.0,75.0,31.52,North,Cash
+ORD0829,2025-01-21,C051,Laptop,Electronics,1000,2,0.1,1800.0,454.83,East,Cash
+ORD0830,2025-03-23,C045,Smartwatch,Electronics,250,4,0.05,950.0,396.58,South,Credit Card
+ORD0831,2025-03-10,C077,Bookshelf,Furniture,180,1,0.05,171.0,61.75,South,Bank Transfer
+ORD0832,2025-05-11,C004,Smartwatch,Electronics,250,3,0.0,750.0,246.19,North,Credit Card
+ORD0833,2025-03-28,C062,Smartwatch,Electronics,250,1,0.0,250.0,108.71,South,Bank Transfer
+ORD0834,2025-08-06,C065,Desk,Furniture,350,3,0.0,1050.0,324.65,West,Bank Transfer
+ORD0835,2025-11-01,C032,Organizer,Stationery,30,4,0.0,120.0,57.07,West,Cash
+ORD0836,2025-12-11,C034,Desk,Furniture,350,2,0.0,700.0,347.44,North,Cash
+ORD0837,2025-12-07,C092,Organizer,Stationery,30,5,0.05,142.5,40.38,West,Bank Transfer
+ORD0838,2025-06-10,C095,Headphones,Electronics,150,4,0.0,600.0,291.76,East,Bank Transfer
+ORD0839,2025-06-27,C072,Premium Pen,Stationery,50,1,0.15,42.5,7.58,North,Bank Transfer
+ORD0840,2025-04-27,C039,Organizer,Stationery,30,5,0.05,142.5,38.96,North,Cash
+ORD0841,2025-07-15,C026,Laptop,Electronics,1000,2,0.05,1900.0,845.19,East,Cash
+ORD0842,2025-11-23,C034,Desk,Furniture,350,4,0.0,1400.0,549.48,West,PayPal
+ORD0843,2025-03-27,C054,Bookshelf,Furniture,180,5,0.05,855.0,371.71,West,Bank Transfer
+ORD0844,2025-10-16,C003,Premium Pen,Stationery,50,4,0.15,170.0,52.87,West,PayPal
+ORD0845,2025-03-22,C050,Headphones,Electronics,150,4,0.0,600.0,292.63,North,Bank Transfer
+ORD0846,2025-06-01,C012,Organizer,Stationery,30,2,0.0,60.0,27.31,North,Cash
+ORD0847,2025-03-02,C065,Headphones,Electronics,150,3,0.1,405.0,147.31,West,PayPal
+ORD0848,2025-03-02,C054,Bookshelf,Furniture,180,5,0.0,900.0,371.04,South,PayPal
+ORD0849,2025-12-20,C005,Smartwatch,Electronics,250,2,0.0,500.0,152.25,West,Credit Card
+ORD0850,2025-01-28,C094,Notebook,Stationery,15,4,0.0,60.0,20.31,East,Bank Transfer
+ORD0851,2025-02-12,C094,Bookshelf,Furniture,180,2,0.0,360.0,126.91,North,Cash
+ORD0852,2025-06-18,C057,Office Chair,Furniture,200,3,0.05,570.0,205.56,East,Credit Card
+ORD0853,2025-03-27,C017,Bookshelf,Furniture,180,5,0.0,900.0,298.8,East,Credit Card
+ORD0854,2025-06-26,C047,Headphones,Electronics,150,3,0.15,382.5,126.96,North,Bank Transfer
+ORD0855,2025-01-17,C023,Laptop,Electronics,1000,1,0.1,900.0,258.22,South,Credit Card
+ORD0856,2025-04-08,C079,Desk,Furniture,350,5,0.05,1662.5,439.68,West,Bank Transfer
+ORD0857,2025-07-17,C085,Laptop,Electronics,1000,3,0.05,2850.0,1161.22,East,Credit Card
+ORD0858,2025-04-08,C014,Headphones,Electronics,150,4,0.15,510.0,129.12,North,Bank Transfer
+ORD0859,2025-03-06,C066,Desk,Furniture,350,5,0.0,1750.0,579.49,East,Cash
+ORD0860,2025-11-26,C075,Office Chair,Furniture,200,5,0.15,850.0,166.84,West,Bank Transfer
+ORD0861,2025-12-07,C051,Notebook,Stationery,15,2,0.1,27.0,7.69,South,Bank Transfer
+ORD0862,2025-01-05,C038,Premium Pen,Stationery,50,4,0.1,180.0,68.66,South,PayPal
+ORD0863,2025-01-02,C064,Headphones,Electronics,150,1,0.05,142.5,57.71,South,Cash
+ORD0864,2025-01-22,C098,Organizer,Stationery,30,3,0.0,90.0,44.63,North,Cash
+ORD0865,2025-04-22,C038,Headphones,Electronics,150,2,0.0,300.0,104.35,North,Cash
+ORD0866,2025-02-26,C050,Headphones,Electronics,150,3,0.1,405.0,176.15,South,Credit Card
+ORD0867,2025-03-07,C098,Desk,Furniture,350,1,0.0,350.0,114.47,West,PayPal
+ORD0868,2025-11-26,C082,Smartphone,Electronics,600,1,0.1,540.0,225.76,West,Cash
+ORD0869,2025-04-08,C030,Bookshelf,Furniture,180,5,0.0,900.0,419.06,North,Credit Card
+ORD0870,2025-05-24,C079,Smartphone,Electronics,600,1,0.0,600.0,242.82,South,Credit Card
+ORD0871,2025-05-05,C091,Office Chair,Furniture,200,3,0.0,600.0,211.45,West,Credit Card
+ORD0872,2025-06-16,C051,Organizer,Stationery,30,4,0.0,120.0,56.66,West,PayPal
+ORD0873,2025-03-27,C063,Notebook,Stationery,15,4,0.05,57.0,21.72,West,Credit Card
+ORD0874,2025-03-17,C098,Smartwatch,Electronics,250,5,0.0,1250.0,504.29,North,PayPal
+ORD0875,2025-12-10,C052,Office Chair,Furniture,200,3,0.2,480.0,154.53,South,Bank Transfer
+ORD0876,2025-10-21,C038,Smartwatch,Electronics,250,3,0.05,712.5,320.17,East,Credit Card
+ORD0877,2025-02-28,C097,Smartwatch,Electronics,250,1,0.0,250.0,83.18,South,Cash
+ORD0878,2025-05-18,C088,Notebook,Stationery,15,3,0.05,42.75,15.73,South,Credit Card
+ORD0879,2025-04-09,C079,Laptop,Electronics,1000,2,0.15,1700.0,694.25,North,Bank Transfer
+ORD0880,2025-07-11,C030,Smartphone,Electronics,600,1,0.1,540.0,143.64,West,Bank Transfer
+ORD0881,2025-08-31,C051,Headphones,Electronics,150,2,0.0,300.0,91.15,West,Credit Card
+ORD0882,2025-11-15,C081,Premium Pen,Stationery,50,5,0.15,212.5,57.2,North,Bank Transfer
+ORD0883,2025-02-18,C005,Smartwatch,Electronics,250,4,0.1,900.0,299.26,North,PayPal
+ORD0884,2025-02-01,C029,Organizer,Stationery,30,5,0.0,150.0,48.65,North,PayPal
+ORD0885,2025-10-04,C004,Office Chair,Furniture,200,4,0.0,800.0,247.6,North,Credit Card
+ORD0886,2025-01-20,C010,Laptop,Electronics,1000,5,0.05,4750.0,1495.46,North,PayPal
+ORD0887,2025-06-03,C056,Smartwatch,Electronics,250,3,0.0,750.0,308.18,East,PayPal
+ORD0888,2025-03-09,C017,Laptop,Electronics,1000,2,0.1,1800.0,563.11,South,Cash
+ORD0889,2025-08-02,C074,Laptop,Electronics,1000,4,0.0,4000.0,1439.25,South,Credit Card
+ORD0890,2025-05-23,C017,Smartwatch,Electronics,250,1,0.15,212.5,77.79,South,Bank Transfer
+ORD0891,2025-08-20,C084,Desk,Furniture,350,2,0.05,665.0,252.39,West,Credit Card
+ORD0892,2025-08-01,C088,Bookshelf,Furniture,180,1,0.0,180.0,60.13,East,PayPal
+ORD0893,2025-03-20,C069,Organizer,Stationery,30,2,0.0,60.0,22.14,South,Cash
+ORD0894,2025-08-02,C034,Headphones,Electronics,150,2,0.05,285.0,110.33,West,Credit Card
+ORD0895,2025-04-26,C006,Headphones,Electronics,150,5,0.1,675.0,200.5,East,Credit Card
+ORD0896,2025-04-02,C053,Organizer,Stationery,30,4,0.1,108.0,45.16,East,PayPal
+ORD0897,2025-09-27,C066,Desk,Furniture,350,4,0.0,1400.0,587.58,West,PayPal
+ORD0898,2025-06-17,C077,Headphones,Electronics,150,2,0.0,300.0,102.41,East,Credit Card
+ORD0899,2025-02-27,C043,Laptop,Electronics,1000,3,0.0,3000.0,1367.69,West,PayPal
+ORD0900,2025-10-11,C075,Notebook,Stationery,15,3,0.05,42.75,18.58,South,PayPal
+ORD0901,2025-01-26,C023,Office Chair,Furniture,200,1,0.0,200.0,61.97,West,PayPal
+ORD0902,2025-03-07,C055,Smartphone,Electronics,600,1,0.0,600.0,274.81,East,PayPal
+ORD0903,2025-09-05,C080,Headphones,Electronics,150,5,0.05,712.5,298.36,South,PayPal
+ORD0904,2025-09-11,C095,Organizer,Stationery,30,2,0.15,51.0,9.36,South,Cash
+ORD0905,2025-02-13,C075,Notebook,Stationery,15,1,0.0,15.0,5.3,North,PayPal
+ORD0906,2025-04-07,C016,Smartwatch,Electronics,250,1,0.0,250.0,90.02,North,Bank Transfer
+ORD0907,2025-02-11,C008,Bookshelf,Furniture,180,2,0.05,342.0,100.59,East,Credit Card
+ORD0908,2025-08-15,C004,Organizer,Stationery,30,5,0.05,142.5,64.03,West,Cash
+ORD0909,2025-09-19,C004,Laptop,Electronics,1000,1,0.0,1000.0,358.81,West,Cash
+ORD0910,2025-06-16,C056,Bookshelf,Furniture,180,5,0.15,765.0,224.34,East,PayPal
+ORD0911,2025-10-06,C025,Office Chair,Furniture,200,4,0.1,720.0,187.34,South,Credit Card
+ORD0912,2025-03-30,C067,Office Chair,Furniture,200,5,0.0,1000.0,398.37,East,Bank Transfer
+ORD0913,2025-06-27,C096,Desk,Furniture,350,3,0.0,1050.0,394.75,East,PayPal
+ORD0914,2025-07-16,C067,Premium Pen,Stationery,50,3,0.05,142.5,53.17,South,Credit Card
+ORD0915,2025-11-03,C027,Desk,Furniture,350,5,0.1,1575.0,532.64,West,PayPal
+ORD0916,2025-09-24,C093,Notebook,Stationery,15,3,0.0,45.0,15.59,East,PayPal
+ORD0917,2025-09-25,C032,Bookshelf,Furniture,180,4,0.05,684.0,233.49,West,PayPal
+ORD0918,2025-03-15,C050,Premium Pen,Stationery,50,2,0.05,95.0,32.33,East,PayPal
+ORD0919,2025-01-08,C061,Smartwatch,Electronics,250,3,0.0,750.0,307.46,South,PayPal
+ORD0920,2025-10-24,C051,Laptop,Electronics,1000,3,0.05,2850.0,1031.33,South,PayPal
+ORD0921,2025-06-13,C019,Bookshelf,Furniture,180,5,0.15,765.0,180.77,North,PayPal
+ORD0922,2025-03-26,C021,Desk,Furniture,350,4,0.0,1400.0,468.74,South,Bank Transfer
+ORD0923,2025-03-13,C005,Smartphone,Electronics,600,2,0.0,1200.0,432.83,North,Cash
+ORD0924,2025-02-24,C082,Premium Pen,Stationery,50,5,0.0,250.0,78.8,East,Bank Transfer
+ORD0925,2025-02-16,C092,Premium Pen,Stationery,50,5,0.15,212.5,46.48,West,PayPal
+ORD0926,2025-08-26,C042,Laptop,Electronics,1000,4,0.2,3200.0,750.51,South,PayPal
+ORD0927,2025-04-14,C061,Headphones,Electronics,150,2,0.0,300.0,109.72,South,Bank Transfer
+ORD0928,2025-07-29,C022,Office Chair,Furniture,200,4,0.1,720.0,171.79,South,Bank Transfer
+ORD0929,2025-02-11,C021,Office Chair,Furniture,200,2,0.05,380.0,130.47,East,Cash
+ORD0930,2025-11-12,C070,Smartphone,Electronics,600,4,0.05,2280.0,684.09,North,Bank Transfer
+ORD0931,2025-09-25,C001,Notebook,Stationery,15,5,0.0,75.0,27.17,East,Cash
+ORD0932,2025-09-20,C005,Notebook,Stationery,15,5,0.0,75.0,29.22,West,PayPal
+ORD0933,2025-12-02,C012,Smartwatch,Electronics,250,1,0.0,250.0,112.91,East,Credit Card
+ORD0934,2025-12-31,C090,Bookshelf,Furniture,180,3,0.05,513.0,196.99,West,Credit Card
+ORD0935,2025-09-16,C046,Organizer,Stationery,30,4,0.0,120.0,36.77,South,Credit Card
+ORD0936,2025-10-10,C034,Headphones,Electronics,150,1,0.15,127.5,32.77,West,Credit Card
+ORD0937,2025-04-24,C049,Desk,Furniture,350,3,0.0,1050.0,406.48,West,PayPal
+ORD0938,2025-12-29,C078,Organizer,Stationery,30,4,0.0,120.0,37.61,North,Credit Card
+ORD0939,2025-02-09,C090,Organizer,Stationery,30,2,0.05,57.0,19.96,West,Bank Transfer
+ORD0940,2025-08-08,C045,Premium Pen,Stationery,50,3,0.1,135.0,44.22,West,Bank Transfer
+ORD0941,2025-05-09,C027,Smartphone,Electronics,600,5,0.0,3000.0,1044.41,East,Credit Card
+ORD0942,2025-01-08,C073,Office Chair,Furniture,200,1,0.0,200.0,71.49,South,Bank Transfer
+ORD0943,2025-04-11,C026,Smartwatch,Electronics,250,3,0.2,600.0,196.03,East,Cash
+ORD0944,2025-06-25,C047,Notebook,Stationery,15,3,0.0,45.0,18.26,East,PayPal
+ORD0945,2025-04-17,C086,Smartphone,Electronics,600,5,0.0,3000.0,1216.49,South,Credit Card
+ORD0946,2025-04-11,C056,Premium Pen,Stationery,50,4,0.1,180.0,64.87,South,Credit Card
+ORD0947,2025-09-17,C094,Desk,Furniture,350,2,0.0,700.0,277.58,West,PayPal
+ORD0948,2025-09-03,C063,Smartwatch,Electronics,250,5,0.0,1250.0,521.72,West,Bank Transfer
+ORD0949,2025-10-02,C048,Premium Pen,Stationery,50,2,0.0,100.0,46.01,North,PayPal
+ORD0950,2025-02-01,C061,Office Chair,Furniture,200,4,0.0,800.0,334.02,East,PayPal
+ORD0951,2025-05-17,C081,Office Chair,Furniture,200,3,0.0,600.0,291.33,South,Bank Transfer
+ORD0952,2025-01-12,C026,Office Chair,Furniture,200,2,0.0,400.0,153.94,West,PayPal
+ORD0953,2025-10-29,C036,Smartphone,Electronics,600,1,0.0,600.0,197.56,South,Bank Transfer
+ORD0954,2025-01-16,C001,Smartphone,Electronics,600,1,0.0,600.0,212.97,West,Bank Transfer
+ORD0955,2025-05-09,C008,Notebook,Stationery,15,5,0.1,67.5,24.59,North,PayPal
+ORD0956,2025-03-04,C099,Notebook,Stationery,15,4,0.0,60.0,28.96,North,Cash
+ORD0957,2025-04-19,C052,Desk,Furniture,350,5,0.0,1750.0,804.25,South,Bank Transfer
+ORD0958,2025-01-21,C079,Smartwatch,Electronics,250,5,0.15,1062.5,301.13,North,PayPal
+ORD0959,2025-06-07,C047,Laptop,Electronics,1000,5,0.05,4750.0,2042.94,South,Bank Transfer
+ORD0960,2025-09-26,C056,Laptop,Electronics,1000,1,0.0,1000.0,391.21,West,Cash
+ORD0961,2025-06-11,C086,Premium Pen,Stationery,50,1,0.15,42.5,15.18,East,Cash
+ORD0962,2025-09-17,C014,Office Chair,Furniture,200,5,0.0,1000.0,330.22,North,Credit Card
+ORD0963,2025-04-12,C090,Smartwatch,Electronics,250,1,0.0,250.0,105.14,West,Bank Transfer
+ORD0964,2025-08-11,C028,Organizer,Stationery,30,4,0.1,108.0,42.11,East,Bank Transfer
+ORD0965,2025-02-28,C087,Smartphone,Electronics,600,5,0.05,2850.0,862.6,East,PayPal
+ORD0966,2025-09-04,C078,Bookshelf,Furniture,180,1,0.0,180.0,77.66,East,Bank Transfer
+ORD0967,2025-05-08,C088,Headphones,Electronics,150,2,0.0,300.0,143.31,West,Credit Card
+ORD0968,2025-10-10,C002,Desk,Furniture,350,5,0.05,1662.5,587.86,West,Cash
+ORD0969,2025-11-21,C026,Office Chair,Furniture,200,5,0.0,1000.0,383.69,South,Cash
+ORD0970,2025-01-25,C014,Office Chair,Furniture,200,4,0.15,680.0,165.65,East,Credit Card
+ORD0971,2025-05-11,C059,Office Chair,Furniture,200,3,0.0,600.0,271.17,East,Bank Transfer
+ORD0972,2025-12-19,C056,Smartphone,Electronics,600,3,0.15,1530.0,470.24,East,Bank Transfer
+ORD0973,2025-07-15,C007,Smartphone,Electronics,600,4,0.05,2280.0,944.46,South,Credit Card
+ORD0974,2025-10-08,C003,Headphones,Electronics,150,4,0.1,540.0,230.29,East,PayPal
+ORD0975,2025-06-03,C023,Organizer,Stationery,30,4,0.1,108.0,26.96,West,Cash
+ORD0976,2025-05-13,C018,Smartwatch,Electronics,250,3,0.05,712.5,228.17,East,Credit Card
+ORD0977,2025-08-15,C038,Office Chair,Furniture,200,4,0.0,800.0,351.77,North,Credit Card
+ORD0978,2025-07-08,C099,Laptop,Electronics,1000,1,0.0,1000.0,380.13,West,Bank Transfer
+ORD0979,2025-09-22,C015,Notebook,Stationery,15,5,0.0,75.0,34.48,South,Cash
+ORD0980,2025-05-14,C064,Laptop,Electronics,1000,5,0.15,4250.0,859.76,East,Bank Transfer
+ORD0981,2025-07-30,C089,Premium Pen,Stationery,50,2,0.1,90.0,37.7,North,Credit Card
+ORD0982,2025-03-01,C028,Laptop,Electronics,1000,2,0.0,2000.0,998.47,South,PayPal
+ORD0983,2025-12-30,C074,Premium Pen,Stationery,50,5,0.0,250.0,99.9,South,Cash
+ORD0984,2025-12-30,C039,Bookshelf,Furniture,180,1,0.0,180.0,69.01,West,Credit Card
+ORD0985,2025-08-01,C057,Notebook,Stationery,15,3,0.05,42.75,15.04,South,Credit Card
+ORD0986,2025-08-04,C017,Laptop,Electronics,1000,3,0.0,3000.0,1467.29,South,PayPal
+ORD0987,2025-08-14,C086,Bookshelf,Furniture,180,1,0.1,162.0,60.69,South,Credit Card
+ORD0988,2025-05-11,C090,Desk,Furniture,350,3,0.2,840.0,210.17,South,Credit Card
+ORD0989,2025-03-17,C044,Smartwatch,Electronics,250,4,0.0,1000.0,456.68,East,Cash
+ORD0990,2025-10-13,C025,Bookshelf,Furniture,180,5,0.0,900.0,292.93,East,Cash
+ORD0991,2025-10-04,C017,Smartwatch,Electronics,250,5,0.0,1250.0,603.22,East,Cash
+ORD0992,2025-06-05,C013,Laptop,Electronics,1000,1,0.0,1000.0,402.52,East,Bank Transfer
+ORD0993,2025-09-05,C084,Organizer,Stationery,30,3,0.0,90.0,32.55,North,PayPal
+ORD0994,2025-08-06,C025,Bookshelf,Furniture,180,2,0.0,360.0,161.15,East,Cash
+ORD0995,2025-07-09,C068,Notebook,Stationery,15,2,0.15,25.5,6.75,South,Bank Transfer
+ORD0996,2025-06-12,C010,Laptop,Electronics,1000,3,0.0,3000.0,1002.37,East,Bank Transfer
+ORD0997,2025-06-29,C067,Office Chair,Furniture,200,2,0.0,400.0,184.77,East,PayPal
+ORD0998,2025-02-03,C018,Smartphone,Electronics,600,1,0.15,510.0,99.93,West,PayPal
+ORD0999,2025-02-10,C100,Bookshelf,Furniture,180,1,0.1,162.0,52.07,South,Credit Card
+ORD1000,2025-11-03,C086,Notebook,Stationery,15,3,0.0,45.0,19.81,East,Bank Transfer
